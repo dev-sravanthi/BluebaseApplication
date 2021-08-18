@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:background="#032462">
+
+                <util.MyCustomTextView_Bold
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Phases"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="15dp"/>
+
+                <util.MyCustomTextView_Bold
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Specifications"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="15dp"/>
+
+                <util.MyCustomTextView_Bold
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Months/Hours/Days"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="15dp"/>
+
+
+                <util.MyCustomTextView_Bold
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Amount"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="15dp"/>
+
+
+            </TableRow>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyview_child_phaselist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="#FF909090"
+                    android:padding="2dip" />
+            </TableRow>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_5sdp">
+
+                    <util.MyCustomTextView_Bold
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:text="Total"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        android:layout_marginLeft="@dimen/_10sdp"/>
+
+                    <util.MyCustomTextView_Bold
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:layout_alignLeft="@+id/text1"
+                        android:layout_alignRight="@+id/textView3"
+                        android:text=":"
+                        android:textColor="#000"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                    <util.MyCustomTextView
+                        android:id="@+id/text_total"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:layout_marginRight="@dimen/_12sdp"
+                        android:background="@drawable/edittext_rounded_box"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_5sdp">
+
+                    <util.MyCustomTextView_Bold
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:text="GST"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        android:layout_marginLeft="@dimen/_10sdp"/>
+
+                    <util.MyCustomTextView_Bold
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:layout_alignLeft="@+id/text1"
+                        android:layout_alignRight="@+id/textView3"
+                        android:text=":"
+                        android:textColor="#000"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                    <util.MyCustomTextView
+                        android:id="@+id/text_gst"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:layout_marginRight="@dimen/_12sdp"
+                        android:background="@drawable/edittext_rounded_box"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp">
+
+                    <util.MyCustomTextView_Bold
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_weight="1.0"
+                        android:text="Grand Total"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <util.MyCustomTextView_Bold
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/text1"
+                        android:layout_alignRight="@+id/textView3"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="0.1"
+                        android:text=":"
+                        android:textColor="#000" />
+
+                    <util.MyCustomTextView
+                        android:id="@+id/text_grandtotal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_12sdp"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/edittext_rounded_box"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="#FF909090"
+                    android:padding="2dip" />
+            </TableRow>
+
+
+        </TableLayout>
+
+    </HorizontalScrollView>
+
+</LinearLayout>

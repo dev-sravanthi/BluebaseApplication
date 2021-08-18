@@ -1,0 +1,1456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/teal_green">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/bbvision_header"
+        android:scaleType="fitXY"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <util.MyCustomTextView_Bold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Candidates View"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="@dimen/_18sdp"
+                    android:textColor="@color/white"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:cardCornerRadius="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <util.MyCustomTextView_Bold
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Application for Candidate"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="@dimen/_15sdp"
+                            android:textColor="@color/btn_blue"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Post Applied For"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <EditText
+                                android:id="@+id/ed_post_applied_for"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Department"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <EditText
+                                android:id="@+id/ed_deparment"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:cardCornerRadius="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <util.MyCustomTextView_Bold
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Personal Details"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="@dimen/_15sdp"
+                            android:textColor="@color/btn_blue"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="First Name"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <EditText
+                                android:id="@+id/ed_firstname"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Last Name"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <EditText
+                                android:id="@+id/ed_lastname"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Gender"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <EditText
+                                android:id="@+id/ed_gender"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Father's Name"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <EditText
+                                android:id="@+id/ed_fathersname"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Date of Birth"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <EditText
+                                android:id="@+id/ed_dateofbirth"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Address Communication"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <EditText
+                                android:id="@+id/ed_address_commun"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Permanent Address"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <EditText
+                                android:id="@+id/ed_permanent_address"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Mobile Number"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <EditText
+                                android:id="@+id/ed_mob_no"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Alternate Mobile No."
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <EditText
+                                android:id="@+id/ed_alternate_mob_no"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Email ID"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <EditText
+                                android:id="@+id/ed_emailid"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Aadhar Number"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <EditText
+                                android:id="@+id/ed_aadhar_no"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"/>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="PAN Number"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <EditText
+                                android:id="@+id/ed_pan_no"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Voter ID"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <EditText
+                                android:id="@+id/ed_voterid"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Educational Details"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <EditText
+                                android:id="@+id/ed_education_details"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Employment Status"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <EditText
+                                android:id="@+id/ed_emplstatus"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Year of Passout"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <EditText
+                                android:id="@+id/ed_yearofpassout"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Round"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <EditText
+                                android:id="@+id/ed_round"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Question Name"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <EditText
+                                android:id="@+id/ed_ques_name"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:visibility="gone"
+                    android:id="@+id/cv_feedback_apt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:cardCornerRadius="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_feedback_apt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <util.MyCustomTextView_Bold
+                            android:id="@+id/text_feedback_apt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="@dimen/_15sdp"
+                            android:textColor="@color/btn_blue"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Marks Scored"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000"/>
+
+                            <EditText
+                                android:id="@+id/ed_marks_scored"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:visibility="gone"
+                    android:id="@+id/cv_technical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:cardCornerRadius="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_technical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <util.MyCustomTextView_Bold
+                            android:id="@+id/text_technical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="@dimen/_15sdp"
+                            android:textColor="@color/btn_blue"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Technical Department Assign"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000"
+                                android:layout_marginTop="@dimen/_5sdp"/>
+
+                            <EditText
+                                android:id="@+id/ed_technicalname"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:gravity="center"
+                                android:layout_marginTop="@dimen/_5sdp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Technical Department"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000"
+                                android:layout_marginTop="@dimen/_5sdp"/>
+
+                            <EditText
+                                android:id="@+id/ed_deptname"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:gravity="center"
+                                android:layout_marginTop="@dimen/_5sdp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:visibility="gone"
+                    android:id="@+id/cv_technical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:cardCornerRadius="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_technical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <util.MyCustomTextView_Bold
+                            android:id="@+id/text_technical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="@dimen/_15sdp"
+                            android:textColor="@color/btn_blue"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Technical Department Assign"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000"
+                                android:layout_marginTop="@dimen/_5sdp"/>
+
+                            <EditText
+                                android:id="@+id/ed_technicalname"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:gravity="center"
+                                android:layout_marginTop="@dimen/_5sdp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Technical Department"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000"
+                                android:layout_marginTop="@dimen/_5sdp"/>
+
+                            <EditText
+                                android:id="@+id/ed_deptname"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:gravity="center"
+                                android:layout_marginTop="@dimen/_5sdp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:visibility="gone"
+                    android:id="@+id/cv_technical_feedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:cardCornerRadius="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_technical_feedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <util.MyCustomTextView_Bold
+                            android:id="@+id/text_technical_feedback"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="@dimen/_15sdp"
+                            android:textColor="@color/btn_blue"/>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:visibility="gone"
+                    android:id="@+id/cv_hodstatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:cardCornerRadius="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_hodstatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <util.MyCustomTextView_Bold
+                            android:id="@+id/text_hodstatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="MD"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="@dimen/_15sdp"
+                            android:textColor="@color/btn_blue"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="MD Name"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000"/>
+
+                            <EditText
+                                android:id="@+id/ed_hodname"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:visibility="gone"
+                    android:id="@+id/cv_hod_feedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:cardCornerRadius="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_hod_feedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <util.MyCustomTextView_Bold
+                            android:id="@+id/text_hod_feedback"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="@dimen/_15sdp"
+                            android:textColor="@color/btn_blue"/>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_mdstatus"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:cardCornerRadius="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <util.MyCustomTextView_Bold
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="MD"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="@dimen/_15sdp"
+                            android:textColor="@color/btn_blue"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="MD Name"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000"/>
+
+                            <EditText
+                                android:id="@+id/ed_mdname"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:visibility="gone"
+                    android:id="@+id/cv_md_feedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:cardCornerRadius="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_md_feedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <util.MyCustomTextView_Bold
+                            android:id="@+id/text_md_feedback"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="@dimen/_15sdp"
+                            android:textColor="@color/btn_blue"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <util.ScrollTextView
+                android:id="@+id/scrolltext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:text="TSDPS Website"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

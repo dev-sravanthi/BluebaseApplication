@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <util.MyCustomTextView_Bold
+        android:id="@+id/text_btn_names"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Action"
+        android:textColor="@color/black"
+        android:layout_marginLeft="5dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:textSize="15dp"/>
+
+</LinearLayout>
+<!--    <?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout-->
+<!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:orientation="vertical">-->
+
+<!--<util.MyCustomTextView_Bold-->
+<!--    android:id="@+id/text_btn_names"-->
+<!--    android:layout_width="120dp"-->
+<!--    android:layout_height="30dp"-->
+<!--    android:layout_marginTop="5dp"-->
+<!--    android:text="Action"-->
+<!--    android:textColor="@color/black"-->
+<!--    android:layout_marginLeft="5dp"-->
+<!--    android:textStyle="bold"-->
+<!--    android:layout_gravity="center"-->
+<!--    android:textSize="15dp"/>-->
+
+<!--</LinearLayout>-->
