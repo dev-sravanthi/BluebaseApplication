@@ -5,6 +5,25 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <util.MyCustomTextView_Bold
+            android:id="@+id/text_phase_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="Grand Total==="
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+    </TableRow>
+
     <HorizontalScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -19,16 +38,16 @@
                 android:layout_height="@dimen/_40sdp"
                 android:background="#032462">
 
-                <util.MyCustomTextView_Bold
-                    android:layout_width="150dp"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="5dp"
-                    android:text="Phases"
-                    android:textColor="@color/white"
-                    android:layout_marginLeft="10dp"
-                    android:layout_gravity="center"
-                    android:textStyle="bold"
-                    android:textSize="15dp"/>
+<!--                <util.MyCustomTextView_Bold-->
+<!--                    android:layout_width="150dp"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:text="Phases"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:layout_marginLeft="10dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textSize="15dp"/>-->
 
                 <util.MyCustomTextView_Bold
                     android:layout_width="150dp"
@@ -42,10 +61,10 @@
                     android:textSize="15dp"/>
 
                 <util.MyCustomTextView_Bold
-                    android:layout_width="150dp"
+                    android:layout_width="80dp"
                     android:layout_height="30dp"
                     android:layout_marginTop="5dp"
-                    android:text="Months/Hours/Days"
+                    android:text="Days"
                     android:textColor="@color/white"
                     android:layout_marginLeft="10dp"
                     android:layout_gravity="center"
@@ -54,7 +73,7 @@
 
 
                 <util.MyCustomTextView_Bold
-                    android:layout_width="150dp"
+                    android:layout_width="120dp"
                     android:layout_height="30dp"
                     android:layout_marginTop="5dp"
                     android:text="Amount"
@@ -87,7 +106,7 @@
 
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
@@ -126,7 +145,8 @@
                         android:layout_marginRight="@dimen/_12sdp"
                         android:background="@drawable/edittext_rounded_box"
                         android:gravity="center"
-                        android:layout_marginTop="@dimen/_5sdp"/>
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@color/black"/>
 
                 </LinearLayout>
 
@@ -165,7 +185,8 @@
                         android:layout_marginRight="@dimen/_12sdp"
                         android:background="@drawable/edittext_rounded_box"
                         android:gravity="center"
-                        android:layout_marginTop="@dimen/_5sdp"/>
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@color/black"/>
 
                 </LinearLayout>
 
@@ -204,7 +225,8 @@
                         android:layout_marginRight="@dimen/_12sdp"
                         android:layout_weight="1.0"
                         android:background="@drawable/edittext_rounded_box"
-                        android:gravity="center" />
+                        android:gravity="center"
+                        android:textColor="@color/black"/>
 
                 </LinearLayout>
 

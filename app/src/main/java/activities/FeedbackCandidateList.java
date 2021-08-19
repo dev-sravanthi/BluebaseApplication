@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -49,6 +50,8 @@ public class FeedbackCandidateList extends AppCompatActivity {
         token=i.getStringExtra("token");
         login_id=i.getStringExtra("login_id");
 
+        System.out.println(token+" ====== "+login_id);
+
         ScrollTextView scrolltext=findViewById(R.id.scrolltext);
         scrolltext.setText(R.string.footer);
         scrolltext.startScroll();
@@ -60,7 +63,6 @@ public class FeedbackCandidateList extends AppCompatActivity {
         }else{
             Utility.getAlertNetNotConneccted(FeedbackCandidateList.this, "Internet Connection");
         }
-
 
     }
 
@@ -80,7 +82,7 @@ public class FeedbackCandidateList extends AppCompatActivity {
     private void loadJSON() {
         showBar();
         Call<FeedbackCandidateListBean> call= RetrofitClient.getInstance().getApi().
-                getFeedbackList("9978c07cfc688537dce1a87a5a779c19","1");
+                getFeedbackList(token,login_id);
         call.enqueue(new Callback<FeedbackCandidateListBean>() {
 
             @Override
@@ -172,18 +174,35 @@ public class FeedbackCandidateList extends AppCompatActivity {
             holder.text_position.setText(data.getPosition());
             holder.text_head_status.setText(data.getHeadStatus());
             holder.text_status.setText(data.getStatus());
-            holder.text_action.setText("View");
+            if(data.getIsAddFeedback().equals("true")){
+                holder.text_action.setText("Add Feedback");
+                holder.text_action.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent=new Intent(getApplicationContext(),InterviewFeedbackForm.class);
+                        intent.putExtra("feedback_candidateId",data.getCandidateId());
+                        intent.putExtra("token",token);
+                        intent.putExtra("login_id",login_id);
+                        startActivity(intent);
+                        finish();
+                    }
+                });
+            }else{
+                holder.text_action.setText("View");
+                holder.text_action.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent=new Intent(getApplicationContext(),CandidateView.class);
+                        intent.putExtra("FROM_ACTIVITY","FeedbackCandidateList");
+                        intent.putExtra("feedback_candidateId",data.getCandidateId());
+                        intent.putExtra("token",token);
+                        intent.putExtra("login_id",login_id);
+                        startActivity(intent);
+                        finish();
+                    }
+                });
+            }
 
-            holder.text_action.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent=new Intent(getApplicationContext(),CandidateView.class);
-                    intent.putExtra("candidate_id",data.getCandidateId());
-                    intent.putExtra("token",token);
-                    startActivity(intent);
-                    finish();
-                }
-            });
         }
 
         @Override
@@ -263,7 +282,6 @@ public class FeedbackCandidateList extends AppCompatActivity {
         }
     }
 
-
     public void showBar(){
         builder = new AlertDialog.Builder(FeedbackCandidateList.this);
         progressDialog = new ProgressDialog(FeedbackCandidateList.this);
@@ -281,5 +299,15 @@ public class FeedbackCandidateList extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent MainActivity = new Intent(getBaseContext(), MenuScreen.class);
+        MainActivity.putExtra("token",token);
+        MainActivity.putExtra("login_id",login_id);
+        MainActivity.addCategory(Intent.CATEGORY_HOME);
+        MainActivity.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(MainActivity);
+        FeedbackCandidateList.this.finish();
+    }
 
 }

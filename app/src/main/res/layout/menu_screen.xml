@@ -47,7 +47,7 @@
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:layout_marginRight="@dimen/_10sdp"
                         android:layout_marginBottom="@dimen/_10sdp"
-                        android:layout_marginTop="@dimen/_20sdp">
+                        android:layout_marginTop="@dimen/_10sdp">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -64,11 +64,11 @@
                             <util.MyCustomTextView_Bold
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Candidate List"/>
-
+                                android:text="Recruitment"
+                                android:textStyle="bold"
+                                android:textColor="@color/btn_blue"/>
 
                         </LinearLayout>
-
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -85,8 +85,9 @@
                             <util.MyCustomTextView_Bold
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Feedback List"/>
-
+                                android:text="Interview Feedback Form"
+                                android:textStyle="bold"
+                                android:textColor="@color/btn_blue"/>
 
                         </LinearLayout>
 
@@ -105,12 +106,11 @@
                             <util.MyCustomTextView_Bold
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Feedback List"/>
-
+                                android:text="CRM"
+                                android:textStyle="bold"
+                                android:textColor="@color/btn_blue"/>
 
                         </LinearLayout>
-
-
 
                     </LinearLayout>
 

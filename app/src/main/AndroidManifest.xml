@@ -15,15 +15,20 @@
         android:theme="@style/AppTheme"
         android:hardwareAccelerated="false"
         android:usesCleartextTraffic="true">
-        <activity android:name="activities.CostSheet">
+        <activity android:name="activities.InterviewFeedbackForm">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="activities.CandidateList"/>
         <activity android:name="activities.MenuScreen"/>
+        <activity android:name="activities.CandidateList"/>
+        <activity android:name="activities.CandidateView"/>
+        <activity android:name="activities.FeedbackCandidateList"/>
+<!--        <activity android:name="activities.InterviewFeedbackForm"/>-->
+        <activity android:name="activities.CostSheet"/>
         <activity android:name="activities.QuotationGeneratedForm"/>
+
 
     </application>
 </manifest>

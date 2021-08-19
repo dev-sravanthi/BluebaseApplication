@@ -1,8 +1,11 @@
 package data.network;
 
+import org.json.JSONObject;
+
 import bean.CandidateListBean;
 import bean.CandidateViewBean;
 import bean.CostSheetListBean;
+import bean.CostSheetSubmitBean;
 import bean.CostSheetViewBean;
 import bean.FeedbackCandidateListBean;
 import bean.FeedbackFormColumnsBean;
@@ -55,7 +58,7 @@ public interface ApiInterface {
             @Field("token")String token,
             @Field("intervieweeCandidateId")String intervieweeCandidateId,
             @Field("interviewerCandidateId")String interviewerCandidateId,
-            @Field("rounds")String rounds,
+            @Field("rounds") JSONObject rounds,
             @Field("isSelected")String isSelected
     );
 
@@ -71,6 +74,14 @@ public interface ApiInterface {
     Call<CostSheetViewBean> getViewCostSheetData(
             @Field("token")String token,
             @Field("enquiryId")String enquiryId
+    );
+
+    @FormUrlEncoded
+    @POST("crm/cost_sheet_submit.php")
+    Call<CostSheetSubmitBean> costSheetSubmit(
+            @Field("token")String token,
+            @Field("enquiryId")String enquiryId,
+            @Field("isApproved")String isApproved
     );
 
 }

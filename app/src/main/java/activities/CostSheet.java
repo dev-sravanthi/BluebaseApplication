@@ -53,6 +53,8 @@ public class CostSheet extends AppCompatActivity {
         token=i.getStringExtra("token");
         login_id=i.getStringExtra("login_id");
 
+        System.out.println(token+" ====== "+login_id);
+
         ScrollTextView scrolltext=findViewById(R.id.scrolltext);
         scrolltext.setText(R.string.footer);
         scrolltext.startScroll();
@@ -81,7 +83,7 @@ public class CostSheet extends AppCompatActivity {
 
     private void loadJSON() {
         showBar();
-        Call<CostSheetListBean> call= RetrofitClient.getInstance().getApi().getCostSheetList("ae4f742d8796813cdba1c17d5404bae1","1");
+        Call<CostSheetListBean> call= RetrofitClient.getInstance().getApi().getCostSheetList(token,login_id);
         call.enqueue(new Callback<CostSheetListBean>() {
 
             @Override
@@ -121,7 +123,6 @@ public class CostSheet extends AppCompatActivity {
 
                     }else{
                         status_message=costSheetListBean.getStatus_message();
-                        Utility.showMessageDialogue(CostSheet.this,status_message,"Info");
                         new android.app.AlertDialog.Builder(CostSheet.this)
                                 .setCancelable(false)
                                 .setTitle("Info")
@@ -213,7 +214,9 @@ public class CostSheet extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Intent i=new Intent(CostSheet.this,QuotationGeneratedForm.class);
+                    i.putExtra("token",token);
                     i.putExtra("enquiryId",enquiryId);
+                    i.putExtra("login_id",login_id);
                     startActivity(i);
                     finish();
                 }
@@ -341,5 +344,15 @@ public class CostSheet extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent MainActivity = new Intent(getBaseContext(), MenuScreen.class);
+        MainActivity.putExtra("token",token);
+        MainActivity.putExtra("login_id",login_id);
+        MainActivity.addCategory(Intent.CATEGORY_HOME);
+        MainActivity.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(MainActivity);
+        CostSheet.this.finish();
+    }
 
 }

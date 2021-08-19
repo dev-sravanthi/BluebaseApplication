@@ -32,7 +32,7 @@ import util.Utility;
 
 public class CandidateList extends AppCompatActivity {
 
-    String token,firstName,lastName,deptName,designationName,phone,email,candidateId,status,status_message;
+    String token,firstName,lastName,deptName,designationName,phone,email,candidateId,status,status_message,login_id;
     boolean networkAvailability=false;
     AlertDialog.Builder builder;
     ProgressDialog progressDialog;
@@ -48,8 +48,8 @@ public class CandidateList extends AppCompatActivity {
 
         Intent i=getIntent();
         token=i.getStringExtra("token");
-
-        System.out.println("token===="+token);
+        login_id=i.getStringExtra("login_id");
+        System.out.println(token+" ====== ");
 
         ScrollTextView scrolltext=findViewById(R.id.scrolltext);
         scrolltext.setText(R.string.footer);
@@ -185,7 +185,8 @@ public class CandidateList extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Intent intent=new Intent(getApplicationContext(),CandidateView.class);
-                    intent.putExtra("candidate_id",data.getCandidateId());
+                    intent.putExtra("FROM_ACTIVITY","CandidateList");
+                    intent.putExtra("candidateId",data.getCandidateId());
                     intent.putExtra("token",token);
                     startActivity(intent);
                     finish();
@@ -304,6 +305,17 @@ public class CandidateList extends AppCompatActivity {
         if (progressDialog != null && progressDialog.isShowing()) {
             progressDialog.dismiss();
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent MainActivity = new Intent(getBaseContext(), MenuScreen.class);
+        MainActivity.putExtra("token",token);
+        MainActivity.putExtra("login_id",login_id);
+        MainActivity.addCategory(Intent.CATEGORY_HOME);
+        MainActivity.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(MainActivity);
+        CandidateList.this.finish();
     }
 
 

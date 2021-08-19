@@ -1,7 +1,11 @@
 package activities;
 
+import android.app.ActivityManager;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,7 +16,7 @@ import util.Utility;
 public class MenuScreen extends AppCompatActivity {
 
     ImageButton imgbtn_candidatelist,imgbtn_feedbacklist,imgbtn_costsheet;
-    String token,candidateId;
+    String token,login_id;
     boolean networkAvailability=false;
 
     @Override
@@ -22,7 +26,9 @@ public class MenuScreen extends AppCompatActivity {
 
         Intent i=getIntent();
         token=i.getStringExtra("token");
-        candidateId=i.getStringExtra("candidateId");
+        login_id=i.getStringExtra("login_id");
+
+        System.out.println(token+" ====== "+login_id);
 
         ScrollTextView scrolltext=findViewById(R.id.scrolltext);
         scrolltext.setText(R.string.footer);
@@ -48,7 +54,7 @@ public class MenuScreen extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(),CandidateList.class);
                 i.putExtra("token",token);
-                i.putExtra("login_id",candidateId);
+                i.putExtra("login_id",login_id);
                 startActivity(i);
                 finish();
             }
@@ -59,7 +65,7 @@ public class MenuScreen extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(),FeedbackCandidateList.class);
                 i.putExtra("token",token);
-                i.putExtra("login_id",candidateId);
+                i.putExtra("login_id",login_id);
                 startActivity(i);
                 finish();
             }
@@ -68,12 +74,28 @@ public class MenuScreen extends AppCompatActivity {
         imgbtn_costsheet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(),FeedbackCandidateList.class);
+                Intent i=new Intent(getApplicationContext(),CostSheet.class);
                 i.putExtra("token",token);
-                i.putExtra("login_id",candidateId);
+                i.putExtra("login_id",login_id);
                 startActivity(i);
                 finish();
             }
         });
     }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent MainActivity = new Intent(getBaseContext(), LoginScreen.class);
+        MainActivity.addCategory(Intent.CATEGORY_HOME);
+        MainActivity.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(MainActivity);
+        MenuScreen.this.finish();
+    }
+
 }
