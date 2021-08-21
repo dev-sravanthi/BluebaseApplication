@@ -60,10 +60,6 @@ public class CandidateView extends AppCompatActivity {
             login_id=i.getStringExtra("login_id");
         }
 
-
-
-        System.out.println(token+" ====== "+candidate_id+" ==== "+previousActivity);
-
         ScrollTextView scrolltext=findViewById(R.id.scrolltext);
         scrolltext.setText(R.string.footer);
         scrolltext.startScroll();

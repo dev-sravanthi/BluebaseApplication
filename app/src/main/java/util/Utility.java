@@ -3,10 +3,13 @@ package util;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
 import com.bluebase.activities.R;
+
+import activities.LoginScreen;
 
 public class Utility {
 
@@ -78,9 +81,8 @@ public class Utility {
                 .setPositiveButton("OK",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
-
-                                //callNewActivity(context, className);
-                                dialog.cancel();
+                                Intent i=new Intent(context,LoginScreen.class);
+                                context.startActivity(i);
                             }
                         });
         final AlertDialog alert = builder.create();

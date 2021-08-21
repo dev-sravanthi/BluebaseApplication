@@ -7,6 +7,8 @@ import bean.CandidateViewBean;
 import bean.CostSheetListBean;
 import bean.CostSheetSubmitBean;
 import bean.CostSheetViewBean;
+import bean.CrmEnquiryFormViewBean;
+import bean.CrmEnquiryListBean;
 import bean.FeedbackCandidateListBean;
 import bean.FeedbackFormColumnsBean;
 import bean.LoginDataBean;
@@ -83,5 +85,19 @@ public interface ApiInterface {
             @Field("enquiryId")String enquiryId,
             @Field("isApproved")String isApproved
     );
+
+    @FormUrlEncoded
+    @POST("crm/enquiry_list.php")
+    Call<CrmEnquiryListBean> getCrmEnquiryList(
+            @Field("token")String token
+    );
+
+    @FormUrlEncoded
+    @POST("crm/enquiry_view.php")
+    Call<CrmEnquiryFormViewBean> getCrmEnquiryFormView(
+            @Field("token")String token,
+            @Field("enquiryId")String enquiryId
+    );
+
 
 }

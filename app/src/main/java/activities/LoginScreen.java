@@ -1,6 +1,7 @@
 package activities;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -32,7 +33,7 @@ public class LoginScreen extends AppCompatActivity {
     boolean networkAvailability=false;
     AlertDialog.Builder builder;
     ProgressDialog progressDialog;
-    String status,token,candidateId,empName,email,deptId,deptName,roleId,roleName;
+    String status,token,candidateId,empName,email,deptId,deptName,roleId,roleName,status_message;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,20 +104,37 @@ public class LoginScreen extends AppCompatActivity {
                     status=loginDataBean.getStatus();
                     token=loginDataBean.getToken();
 
-                    LoginDataBean.LoginUserDetails loginUserDetails=loginDataBean.getLoginUserDetails();
+                    if(status.equals("true")){
+                        LoginDataBean.LoginUserDetails loginUserDetails=loginDataBean.getLoginUserDetails();
 
-                    candidateId=loginUserDetails.getCandidateId();
-                    empName=loginUserDetails.getEmpName();
-                    email=loginUserDetails.getEmail();
-                    deptId=loginUserDetails.getDeptId();
-                    deptName=loginUserDetails.getDeptName();
-                    roleId=loginUserDetails.getRoleId();
-                    roleName=loginUserDetails.getRoleName();
+                        candidateId=loginUserDetails.getCandidateId();
+                        empName=loginUserDetails.getEmpName();
+                        email=loginUserDetails.getEmail();
+                        deptId=loginUserDetails.getDeptId();
+                        deptName=loginUserDetails.getDeptName();
+                        roleId=loginUserDetails.getRoleId();
+                        roleName=loginUserDetails.getRoleName();
 
-                    Intent i =new Intent(getApplicationContext(), MenuScreen.class);
-                    i.putExtra("token",token);
-                    i.putExtra("login_id",candidateId);
-                    startActivity(i);
+                        Intent i =new Intent(getApplicationContext(), MenuScreen.class);
+                        i.putExtra("token",token);
+                        i.putExtra("login_id",candidateId);
+                        startActivity(i);
+
+                    }else{
+                        status_message=loginDataBean.getStatus_message();
+                        new android.app.AlertDialog.Builder(LoginScreen.this)
+                                .setCancelable(false)
+                                .setTitle("Info")
+                                .setMessage(status_message)
+                                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        dialog.dismiss();
+                                    }
+                                })
+                                .show();
+                    }
+
 
                 }else{
                     progressDialog.dismiss();
@@ -125,7 +143,17 @@ public class LoginScreen extends AppCompatActivity {
                         jObjError = new JSONObject(response.errorBody().string());
                         String error=jObjError.getString("message");
 
-                        Utility.showAlertDialog(LoginScreen.this,"Error",error,false);
+                        new android.app.AlertDialog.Builder(LoginScreen.this)
+                                .setCancelable(false)
+                                .setTitle("Error")
+                                .setMessage(error)
+                                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        dialog.dismiss();
+                                    }
+                                })
+                                .show();
 
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -140,7 +168,16 @@ public class LoginScreen extends AppCompatActivity {
             @Override
             public void onFailure(Call<LoginDataBean> call, Throwable t) {
                 progressDialog.dismiss();
-                Utility.showAlertDialog(LoginScreen.this,"Error",t.getMessage(),false);
+                new android.app.AlertDialog.Builder(LoginScreen.this)
+                        .setCancelable(false)
+                        .setTitle("Error")
+                        .setMessage(status_message)
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        }).show();
             }
         });
 

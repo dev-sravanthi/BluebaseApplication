@@ -31,7 +31,7 @@
                 <util.MyCustomTextView_Bold
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Cost Sheet"
+                    android:text="Enquiry Form"
                     android:layout_marginLeft="@dimen/_10sdp"
                     android:layout_marginRight="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_10sdp"
@@ -40,6 +40,7 @@
                     android:gravity="center"
                     android:textSize="@dimen/_18sdp"
                     android:textColor="@color/white"/>
+
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -61,17 +62,17 @@
                         android:layout_marginBottom="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_5sdp">
 
-                        <util.MyCustomTextView_Bold
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Enquiry Details"
-                            android:layout_marginLeft="@dimen/_10sdp"
-                            android:layout_marginRight="@dimen/_10sdp"
-                            android:layout_marginBottom="@dimen/_5sdp"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:textSize="@dimen/_14sdp"
-                            android:textColor="@color/btn_blue"/>
+<!--                        <util.MyCustomTextView_Bold-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Enquiry Details"-->
+<!--                            android:layout_marginLeft="@dimen/_10sdp"-->
+<!--                            android:layout_marginRight="@dimen/_10sdp"-->
+<!--                            android:layout_marginBottom="@dimen/_5sdp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:gravity="center"-->
+<!--                            android:textSize="@dimen/_15sdp"-->
+<!--                            android:textColor="@color/btn_blue"/>-->
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -85,7 +86,84 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
-                                android:text="Proposal For"
+                                android:text="Client Type"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <Spinner
+                                android:id="@+id/spin_clienttype"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/spinner_border"
+                                android:layout_gravity="center"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Call Type"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <Spinner
+                                android:id="@+id/spin_calltype"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/spinner_border"
+                                android:layout_gravity="center"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Date"
                                 android:textColor="@color/black"
                                 android:textSize="@dimen/_12ssp"
                                 android:layout_marginLeft="@dimen/_10sdp"/>
@@ -100,14 +178,14 @@
                                 android:textColor="#000" />
 
                             <util.MyCustomEditText
-                                android:id="@+id/ed_proposal_for"
+                                android:id="@+id/ed_date"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:gravity="center"/>
 
                         </LinearLayout>
 
@@ -143,9 +221,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:gravity="center"/>
 
                         </LinearLayout>
 
@@ -161,7 +239,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
-                                android:text="Proposal Date"
+                                android:text="Address"
                                 android:textColor="@color/black"
                                 android:textSize="@dimen/_12ssp"
                                 android:layout_marginLeft="@dimen/_10sdp"/>
@@ -176,14 +254,14 @@
                                 android:textColor="#000" />
 
                             <util.MyCustomEditText
-                                android:id="@+id/ed_proposal_date"
+                                android:id="@+id/ed_address"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:gravity="center"/>
 
                         </LinearLayout>
 
@@ -199,7 +277,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
-                                android:text="Version"
+                                android:text="City"
                                 android:textColor="@color/black"
                                 android:textSize="@dimen/_12ssp"
                                 android:layout_marginLeft="@dimen/_10sdp"/>
@@ -214,14 +292,319 @@
                                 android:textColor="#000" />
 
                             <util.MyCustomEditText
-                                android:id="@+id/ed_version"
+                                android:id="@+id/ed_city"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Client Name"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <util.MyCustomEditText
+                                android:id="@+id/ed_clientname"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:layout_gravity="center"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Designation"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <util.MyCustomEditText
+                                android:id="@+id/ed_designation"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:layout_gravity="center"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Contact No."
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <util.MyCustomEditText
+                                android:id="@+id/ed_contactno"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:layout_gravity="center"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Email ID"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <util.MyCustomEditText
+                                android:id="@+id/ed_emailid"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:layout_gravity="center"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Service"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <util.MyCustomEditText
+                                android:id="@+id/ed_service"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:layout_gravity="center"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Feedback"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <util.MyCustomEditText
+                                android:id="@+id/ed_feedback"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:layout_gravity="center"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Followup Date"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <util.MyCustomEditText
+                                android:id="@+id/ed_followupdate"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:layout_gravity="center"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Department"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <util.MyCustomEditText
+                                android:id="@+id/ed_department"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:layout_gravity="center"
+                                android:gravity="center"/>
 
                         </LinearLayout>
 
@@ -252,281 +635,20 @@
                                 android:textColor="#000" />
 
                             <util.MyCustomEditText
-                                android:id="@+id/ed_emp_name"
+                                android:id="@+id/ed_employeename"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"
-                                android:background="@drawable/edittext_rounded_box"/>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:layout_marginTop="@dimen/_10sdp"
-                            android:paddingRight="@dimen/_5sdp"
-                            android:paddingLeft="@dimen/_5sdp">
-
-                            <util.MyCustomTextView_Bold
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1.0"
-                                android:text="Employee EmailID"
-                                android:textColor="@color/black"
-                                android:textSize="@dimen/_12ssp"
-                                android:layout_marginLeft="@dimen/_10sdp"/>
-
-                            <util.MyCustomTextView_Bold
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.1"
-                                android:layout_alignLeft="@+id/text1"
-                                android:layout_alignRight="@+id/textView3"
-                                android:text=":"
-                                android:textColor="#000" />
-
-                            <util.MyCustomEditText
-                                android:id="@+id/ed_emp_emailid"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1.0"
-                                android:layout_marginRight="@dimen/_12sdp"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:background="@drawable/edittext_rounded_box"/>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:layout_marginTop="@dimen/_10sdp"
-                            android:paddingRight="@dimen/_5sdp"
-                            android:paddingLeft="@dimen/_5sdp">
-
-                            <util.MyCustomTextView_Bold
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1.0"
-                                android:text="Employee Telephone No"
-                                android:textColor="@color/black"
-                                android:textSize="@dimen/_12ssp"
-                                android:layout_marginLeft="@dimen/_10sdp"/>
-
-                            <util.MyCustomTextView_Bold
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.1"
-                                android:layout_alignLeft="@+id/text1"
-                                android:layout_alignRight="@+id/textView3"
-                                android:text=":"
-                                android:textColor="#000" />
-
-                            <util.MyCustomEditText
-                                android:id="@+id/ed_emp_telephone_no"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1.0"
-                                android:layout_marginRight="@dimen/_12sdp"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:background="@drawable/edittext_rounded_box"/>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:layout_marginTop="@dimen/_10sdp"
-                            android:paddingRight="@dimen/_5sdp"
-                            android:paddingLeft="@dimen/_5sdp">
-
-                            <util.MyCustomTextView_Bold
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1.0"
-                                android:text="Scope Statement"
-                                android:textColor="@color/black"
-                                android:textSize="@dimen/_12ssp"
-                                android:layout_marginLeft="@dimen/_10sdp"/>
-
-                            <util.MyCustomTextView_Bold
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.1"
-                                android:layout_alignLeft="@+id/text1"
-                                android:layout_alignRight="@+id/textView3"
-                                android:text=":"
-                                android:textColor="#000" />
-
-                            <util.MyCustomEditText
-                                android:id="@+id/ed_scope_statement"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1.0"
-                                android:layout_marginRight="@dimen/_12sdp"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:background="@drawable/edittext_rounded_box"/>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:layout_marginTop="@dimen/_10sdp"
-                            android:paddingRight="@dimen/_5sdp"
-                            android:paddingLeft="@dimen/_5sdp">
-
-                            <util.MyCustomTextView_Bold
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1.0"
-                                android:text="Proposal Bluebase Software Services Private Limited"
-                                android:textColor="@color/black"
-                                android:textSize="@dimen/_12ssp"
-                                android:layout_marginLeft="@dimen/_10sdp"/>
-
-                            <util.MyCustomTextView_Bold
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.1"
-                                android:layout_alignLeft="@+id/text1"
-                                android:layout_alignRight="@+id/textView3"
-                                android:text=":"
-                                android:textColor="#000" />
-
-                            <util.MyCustomEditText
-                                android:id="@+id/ed_proposal_bb"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1.0"
-                                android:layout_marginRight="@dimen/_12sdp"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:background="@drawable/edittext_rounded_box"/>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:layout_marginTop="@dimen/_10sdp"
-                            android:paddingRight="@dimen/_5sdp"
-                            android:paddingLeft="@dimen/_5sdp">
-
-                            <util.MyCustomTextView_Bold
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1.0"
-                                android:text="Terms and Conditions"
-                                android:textColor="@color/black"
-                                android:textSize="@dimen/_12ssp"
-                                android:layout_marginLeft="@dimen/_10sdp"/>
-
-                            <util.MyCustomTextView_Bold
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.1"
-                                android:layout_alignLeft="@+id/text1"
-                                android:layout_alignRight="@+id/textView3"
-                                android:text=":"
-                                android:textColor="#000" />
-
-                            <util.MyCustomEditText
-                                android:id="@+id/ed_terms_conditions"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1.0"
-                                android:layout_marginRight="@dimen/_12sdp"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:gravity="center"/>
 
                         </LinearLayout>
 
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cv_costsheet_entrydetails"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_10sdp"
-                    android:layout_marginLeft="@dimen/_10sdp"
-                    android:layout_marginRight="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    app:cardCornerRadius="@dimen/_10sdp">
-
-                    <LinearLayout
-                        android:id="@+id/ll_costsheet_entrydetails"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:layout_marginLeft="@dimen/_10sdp"
-                        android:layout_marginRight="@dimen/_10sdp"
-                        android:layout_marginBottom="@dimen/_10sdp"
-                        android:layout_marginTop="@dimen/_5sdp">
-
-                        <util.MyCustomTextView_Bold
-                            android:id="@+id/text_costsheet_entrydetails"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Cost Sheet Entry Details"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:textSize="@dimen/_14sdp"
-                            android:textColor="@color/btn_blue"/>
-
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/recyview_phaselist"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <LinearLayout
-                    android:visibility="gone"
-                    android:id="@+id/ll_buttons"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:layout_marginBottom="@dimen/_5sdp">
-
-                    <Button
-                        android:id="@+id/btn_approve"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Approve"
-                        android:background="@drawable/button_style"
-                        android:layout_margin="@dimen/_5sdp"
-                        android:textColor="@color/white"/>
-
-                    <Button
-                        android:id="@+id/btn_reject"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Reject"
-                        android:background="@drawable/button_style"
-                        android:layout_margin="@dimen/_5sdp"
-                        android:textColor="@color/white"/>
-
-                </LinearLayout>
 
             </LinearLayout>
 

@@ -99,7 +99,7 @@
                                 android:text=":"
                                 android:textColor="#000" />
 
-                            <EditText
+                            <util.MyCustomEditText
                                 android:id="@+id/ed_post_applied_for"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -135,7 +135,7 @@
                                 android:text=":"
                                 android:textColor="#000" />
 
-                            <EditText
+                            <util.MyCustomEditText
                                 android:id="@+id/ed_deparment"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -207,7 +207,7 @@
                                 android:text=":"
                                 android:textColor="#000" />
 
-                            <EditText
+                            <util.MyCustomEditText
                                 android:id="@+id/ed_firstname"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -243,7 +243,7 @@
                                 android:text=":"
                                 android:textColor="#000" />
 
-                            <EditText
+                            <util.MyCustomEditText
                                 android:id="@+id/ed_lastname"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -279,7 +279,7 @@
                                 android:text=":"
                                 android:textColor="#000" />
 
-                            <EditText
+                            <util.MyCustomEditText
                                 android:id="@+id/ed_gender"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -315,7 +315,7 @@
                                 android:text=":"
                                 android:textColor="#000" />
 
-                            <EditText
+                            <util.MyCustomEditText
                                 android:id="@+id/ed_fathersname"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -351,7 +351,7 @@
                                 android:text=":"
                                 android:textColor="#000" />
 
-                            <EditText
+                            <util.MyCustomEditText
                                 android:id="@+id/ed_dateofbirth"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -387,7 +387,7 @@
                                 android:text=":"
                                 android:textColor="#000" />
 
-                            <EditText
+                            <util.MyCustomEditText
                                 android:id="@+id/ed_address_commun"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -423,7 +423,7 @@
                                 android:text=":"
                                 android:textColor="#000" />
 
-                            <EditText
+                            <util.MyCustomEditText
                                 android:id="@+id/ed_permanent_address"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -459,7 +459,7 @@
                                 android:text=":"
                                 android:textColor="#000" />
 
-                            <EditText
+                            <util.MyCustomEditText
                                 android:id="@+id/ed_mob_no"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -495,7 +495,7 @@
                                 android:text=":"
                                 android:textColor="#000" />
 
-                            <EditText
+                            <util.MyCustomEditText
                                 android:id="@+id/ed_alternate_mob_no"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -531,7 +531,7 @@
                                 android:text=":"
                                 android:textColor="#000" />
 
-                            <EditText
+                            <util.MyCustomEditText
                                 android:id="@+id/ed_emailid"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -567,7 +567,7 @@
                                 android:text=":"
                                 android:textColor="#000" />
 
-                            <EditText
+                            <util.MyCustomEditText
                                 android:id="@+id/ed_aadhar_no"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -604,7 +604,7 @@
                                 android:text=":"
                                 android:textColor="#000" />
 
-                            <EditText
+                            <util.MyCustomEditText
                                 android:id="@+id/ed_pan_no"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -676,7 +676,7 @@
                                 android:text=":"
                                 android:textColor="#000" />
 
-                            <EditText
+                            <util.MyCustomEditText
                                 android:id="@+id/ed_education_details"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -712,7 +712,7 @@
                                 android:text=":"
                                 android:textColor="#000" />
 
-                            <EditText
+                            <util.MyCustomEditText
                                 android:id="@+id/ed_emplstatus"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -748,7 +748,7 @@
                                 android:text=":"
                                 android:textColor="#000" />
 
-                            <EditText
+                            <util.MyCustomEditText
                                 android:id="@+id/ed_yearofpassout"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -784,7 +784,7 @@
                                 android:text=":"
                                 android:textColor="#000" />
 
-                            <EditText
+                            <util.MyCustomEditText
                                 android:id="@+id/ed_round"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -820,7 +820,7 @@
                                 android:text=":"
                                 android:textColor="#000" />
 
-                            <EditText
+                            <util.MyCustomEditText
                                 android:id="@+id/ed_ques_name"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -896,7 +896,7 @@
                                 android:text=":"
                                 android:textColor="#000"/>
 
-                            <EditText
+                            <util.MyCustomEditText
                                 android:id="@+id/ed_marks_scored"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -1013,7 +1013,7 @@
                                 android:textColor="#000"
                                 android:layout_marginTop="@dimen/_5sdp"/>
 
-                            <EditText
+                            <util.MyCustomEditText
                                 android:id="@+id/ed_deptname"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -1092,7 +1092,7 @@
                                 android:textColor="#000"
                                 android:layout_marginTop="@dimen/_5sdp"/>
 
-                            <EditText
+                            <util.MyCustomEditText
                                 android:id="@+id/ed_technicalname"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -1131,7 +1131,7 @@
                                 android:textColor="#000"
                                 android:layout_marginTop="@dimen/_5sdp"/>
 
-                            <EditText
+                            <util.MyCustomEditText
                                 android:id="@+id/ed_deptname"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -1251,7 +1251,7 @@
                                 android:text=":"
                                 android:textColor="#000"/>
 
-                            <EditText
+                            <util.MyCustomEditText
                                 android:id="@+id/ed_hodname"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -1368,7 +1368,7 @@
                                 android:text=":"
                                 android:textColor="#000"/>
 
-                            <EditText
+                            <util.MyCustomEditText
                                 android:id="@+id/ed_mdname"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"

@@ -2,6 +2,7 @@ package activities;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -32,7 +33,7 @@ import util.ScrollTextView;
 import util.Utility;
 
 public class FeedbackCandidateList extends AppCompatActivity {
-    String token,candidateId,firstName,lastName,position,headStatus,status,isAddFeedback,login_id;
+    String token,candidateId,firstName,lastName,position,headStatus,status,isAddFeedback,login_id,status_message;
     boolean networkAvailability=false;
     AlertDialog.Builder builder;
     ProgressDialog progressDialog;
@@ -93,29 +94,64 @@ public class FeedbackCandidateList extends AppCompatActivity {
                     FeedbackCandidateListBean feedbackCandidateListBean=response.body();
                     String status_main=feedbackCandidateListBean.getStatus();
 
-                    List<FeedbackCandidateListBean.FeedbackCandList> feedbackCandLists=
-                            feedbackCandidateListBean.getFeedbackCandLists();
+                    if(status_main.equals("true")){
+                        List<FeedbackCandidateListBean.FeedbackCandList> feedbackCandLists=
+                                feedbackCandidateListBean.getFeedbackCandLists();
 
-                    for(int i=0;i<feedbackCandLists.size();i++){
-                        candidateId=feedbackCandLists.get(i).getCandidateId();
-                        firstName=feedbackCandLists.get(i).getFirstName();
-                        lastName=feedbackCandLists.get(i).getLastName();
-                        position=feedbackCandLists.get(i).getPosition();
-                        headStatus=feedbackCandLists.get(i).getHeadStatus();
-                        status=feedbackCandLists.get(i).getStatus();
-                        isAddFeedback=feedbackCandLists.get(i).getIsAddFeedback();
+                        for(int i=0;i<feedbackCandLists.size();i++){
+                            candidateId=feedbackCandLists.get(i).getCandidateId();
+                            firstName=feedbackCandLists.get(i).getFirstName();
+                            lastName=feedbackCandLists.get(i).getLastName();
+                            position=feedbackCandLists.get(i).getPosition();
+                            headStatus=feedbackCandLists.get(i).getHeadStatus();
+                            status=feedbackCandLists.get(i).getStatus();
+                            isAddFeedback=feedbackCandLists.get(i).getIsAddFeedback();
 
-                        FeedbackListBean feedbackListBean=new FeedbackListBean(candidateId,firstName,lastName,
-                                position,headStatus,status,isAddFeedback);
-                        list.add(feedbackListBean);
+                            FeedbackListBean feedbackListBean=new FeedbackListBean(candidateId,firstName,lastName,
+                                    position,headStatus,status,isAddFeedback);
+                            list.add(feedbackListBean);
+                        }
+
+                        feedbackListAdapter.notifyDataSetChanged();
+
+                    }else{
+                        status_message=feedbackCandidateListBean.getStatus_message();
+                        new android.app.AlertDialog.Builder(FeedbackCandidateList.this)
+                                .setCancelable(false)
+                                .setTitle("Info")
+                                .setMessage(status_message)
+                                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        Intent i=new Intent(FeedbackCandidateList.this,MenuScreen.class);
+                                        i.putExtra("token",token);
+                                        i.putExtra("login_id",login_id);
+                                        startActivity(i);
+                                        finish();
+                                    }
+                                })
+                                .show();
                     }
 
-                    feedbackListAdapter.notifyDataSetChanged();
 
                 }else{
                     try {
                         progressDialog.dismiss();
-                        System.out.println("todayHomeWork_bean  ====fail"+response.errorBody().string());
+                        new android.app.AlertDialog.Builder(FeedbackCandidateList.this)
+                                .setCancelable(false)
+                                .setTitle("Info")
+                                .setMessage(response.errorBody().string())
+                                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        Intent i=new Intent(FeedbackCandidateList.this,MenuScreen.class);
+                                        i.putExtra("token",token);
+                                        i.putExtra("login_id",login_id);
+                                        startActivity(i);
+                                        finish();
+                                    }
+                                })
+                                .show();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -125,8 +161,22 @@ public class FeedbackCandidateList extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<FeedbackCandidateListBean> call, Throwable t) {
-                System.out.println("todayHomeWork_bean===="+t.getMessage());
                 progressDialog.dismiss();
+                new android.app.AlertDialog.Builder(FeedbackCandidateList.this)
+                        .setCancelable(false)
+                        .setTitle("Info")
+                        .setMessage(t.getMessage())
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent i=new Intent(FeedbackCandidateList.this,MenuScreen.class);
+                                i.putExtra("token",token);
+                                i.putExtra("login_id",login_id);
+                                startActivity(i);
+                                finish();
+                            }
+                        })
+                        .show();
             }
 
         });

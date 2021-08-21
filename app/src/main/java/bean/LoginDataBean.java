@@ -4,10 +4,18 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class LoginDataBean {
-    private String status,token;
+    private String status,token,status_message;
     @SerializedName("userDetails")
     @Expose
     private LoginUserDetails loginUserDetails;
+
+    public String getStatus_message() {
+        return status_message;
+    }
+
+    public void setStatus_message(String status_message) {
+        this.status_message = status_message;
+    }
 
     public String getStatus() {
         return status;

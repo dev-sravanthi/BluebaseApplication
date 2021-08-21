@@ -6,10 +6,18 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class FeedbackCandidateListBean {
-    private String status;
+    private String status,status_message;
     @SerializedName("candidateList")
     @Expose
     List<FeedbackCandList> feedbackCandLists;
+
+    public String getStatus_message() {
+        return status_message;
+    }
+
+    public void setStatus_message(String status_message) {
+        this.status_message = status_message;
+    }
 
     public List<FeedbackCandList> getFeedbackCandLists() {
         return feedbackCandLists;

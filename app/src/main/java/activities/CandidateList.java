@@ -2,6 +2,7 @@ package activities;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -49,7 +50,6 @@ public class CandidateList extends AppCompatActivity {
         Intent i=getIntent();
         token=i.getStringExtra("token");
         login_id=i.getStringExtra("login_id");
-        System.out.println(token+" ====== ");
 
         ScrollTextView scrolltext=findViewById(R.id.scrolltext);
         scrolltext.setText(R.string.footer);
@@ -92,31 +92,65 @@ public class CandidateList extends AppCompatActivity {
                     CandidateListBean candidateListBean=response.body();
                     String status_main=candidateListBean.getStatus();
 
-                    List<CandidateListBean.CandidateListData> candidateListDataList=
-                            candidateListBean.getCandidateListDataList();
+                    if(status_main.equals("true")){
 
-                    for(int i=0;i<candidateListDataList.size();i++){
-                        firstName=candidateListDataList.get(i).getFirstName();
-                        lastName=candidateListDataList.get(i).getLastName();
-                        deptName=candidateListDataList.get(i).getDeptName();
-                        designationName=candidateListDataList.get(i).getDesignationName();
-                        phone=candidateListDataList.get(i).getPhone();
-                        email=candidateListDataList.get(i).getEmail();
-                        candidateId=candidateListDataList.get(i).getCandidateId();
-                        status=candidateListDataList.get(i).getStatus();
-                        status_message=candidateListDataList.get(i).getStatus_message();
+                        List<CandidateListBean.CandidateListData> candidateListDataList=
+                                candidateListBean.getCandidateListDataList();
 
-                        CanListBean canListBean=new CanListBean(firstName,lastName,deptName,designationName,
-                                phone,email,candidateId,status,status_message);
-                        list.add(canListBean);
+                        for(int i=0;i<candidateListDataList.size();i++){
+                            firstName=candidateListDataList.get(i).getFirstName();
+                            lastName=candidateListDataList.get(i).getLastName();
+                            deptName=candidateListDataList.get(i).getDeptName();
+                            designationName=candidateListDataList.get(i).getDesignationName();
+                            phone=candidateListDataList.get(i).getPhone();
+                            email=candidateListDataList.get(i).getEmail();
+                            candidateId=candidateListDataList.get(i).getCandidateId();
+                            status=candidateListDataList.get(i).getStatus();
+                            status_message=candidateListDataList.get(i).getStatus_message();
+
+                            CanListBean canListBean=new CanListBean(firstName,lastName,deptName,designationName,
+                                    phone,email,candidateId,status,status_message);
+                            list.add(canListBean);
+                        }
+
+                        candidateListAdapter.notifyDataSetChanged();
+
+                    }else{
+                        status_message=candidateListBean.getStatus_message();
+                        new android.app.AlertDialog.Builder(CandidateList.this)
+                                .setCancelable(false)
+                                .setTitle("Info")
+                                .setMessage(status_message)
+                                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        Intent i=new Intent(CandidateList.this,MenuScreen.class);
+                                        i.putExtra("token",token);
+                                        i.putExtra("login_id",login_id);
+                                        startActivity(i);
+                                        finish();
+                                    }
+                                })
+                                .show();
                     }
-
-                    candidateListAdapter.notifyDataSetChanged();
-
                 }else{
+                    progressDialog.dismiss();
                     try {
-                        progressDialog.dismiss();
-                        System.out.println("todayHomeWork_bean  ====fail"+response.errorBody().string());
+                        new android.app.AlertDialog.Builder(CandidateList.this)
+                                .setCancelable(false)
+                                .setTitle("Info")
+                                .setMessage(response.errorBody().string())
+                                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        Intent i=new Intent(CandidateList.this,MenuScreen.class);
+                                        i.putExtra("token",token);
+                                        i.putExtra("login_id",login_id);
+                                        startActivity(i);
+                                        finish();
+                                    }
+                                })
+                                .show();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -126,9 +160,22 @@ public class CandidateList extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<CandidateListBean> call, Throwable t) {
-                System.out.println("todayHomeWork_bean===="+t.getMessage());
                 progressDialog.dismiss();
-            }
+                new android.app.AlertDialog.Builder(CandidateList.this)
+                        .setCancelable(false)
+                        .setTitle("Info")
+                        .setMessage(t.getMessage())
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent i=new Intent(CandidateList.this,MenuScreen.class);
+                                i.putExtra("token",token);
+                                i.putExtra("login_id",login_id);
+                                startActivity(i);
+                                finish();
+                            }
+                        })
+                        .show();            }
 
         });
     }

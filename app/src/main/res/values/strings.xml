@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">BluebaseApplication</string>
     <string name="footer">Designed &amp; Developed by Bluebase Software Service Pvt. Ltd.</string>
+
+    <string-array name="status">
+        <item>-Select-</item>
+        <item>Select for Next Level</item>
+        <item>Not Selected</item>
+    </string-array>
+
 </resources>

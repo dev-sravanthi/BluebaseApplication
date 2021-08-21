@@ -85,13 +85,9 @@ public class QuotationGeneratedForm extends AppCompatActivity {
 
         if(networkAvailability==true){
             findviewbyids();
-        }else{
+        }else {
             Utility.getAlertNetNotConneccted(QuotationGeneratedForm.this, "Internet Connection");
         }
-
-
-       // loadJSON_getCandidateView();
-      //  loadJSON();
     }
 
     private void findviewbyids(){
@@ -137,6 +133,7 @@ public class QuotationGeneratedForm extends AppCompatActivity {
                 if(response.isSuccessful()){
                     CostSheetViewBean costSheetViewBean=response.body();
                     status=costSheetViewBean.getStatus();
+
                     gst=costSheetViewBean.getGst();
                     showButtons=costSheetViewBean.getShowButtons();
 
@@ -231,7 +228,19 @@ public class QuotationGeneratedForm extends AppCompatActivity {
                 }else{
                     try {
                         progressDialog.dismiss();
-                        System.out.println("todayHomeWork_bean====fail"+response.errorBody().string());
+                        new android.app.AlertDialog.Builder(QuotationGeneratedForm.this)
+                                .setCancelable(false)
+                                .setTitle("Info")
+                                .setMessage(response.errorBody().string())
+                                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        Intent i=new Intent(QuotationGeneratedForm.this,CostSheet.class);
+                                        startActivity(i);
+                                        finish();
+                                    }
+                                })
+                                .show();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -241,8 +250,20 @@ public class QuotationGeneratedForm extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<CostSheetViewBean> call, Throwable t) {
-                System.out.println("todayHomeWork_bean===="+t.getMessage());
                 progressDialog.dismiss();
+                new android.app.AlertDialog.Builder(QuotationGeneratedForm.this)
+                        .setCancelable(false)
+                        .setTitle("Error")
+                        .setMessage(t.getMessage())
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent i=new Intent(QuotationGeneratedForm.this,CostSheet.class);
+                                startActivity(i);
+                                finish();
+                            }
+                        })
+                        .show();
             }
 
         });
