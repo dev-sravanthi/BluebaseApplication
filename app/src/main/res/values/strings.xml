@@ -8,4 +8,17 @@
         <item>Not Selected</item>
     </string-array>
 
+    <string-array name="clienttype">
+        <item>-Select-</item>
+        <item>Existing</item>
+        <item>New</item>
+    </string-array>
+
+    <string-array name="calltype">
+        <item>-Select-</item>
+        <item>Incoming</item>
+        <item>Outgoing</item>
+        <item>Direct</item>
+    </string-array>
+
 </resources>

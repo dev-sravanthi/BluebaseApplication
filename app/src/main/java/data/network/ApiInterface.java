@@ -9,9 +9,14 @@ import bean.CostSheetSubmitBean;
 import bean.CostSheetViewBean;
 import bean.CrmEnquiryFormViewBean;
 import bean.CrmEnquiryListBean;
+import bean.CrmGetClientDetails;
+import bean.CrmGetClientList;
+import bean.CrmGetDepartmentList;
+import bean.CrmGetEmployeeList;
 import bean.FeedbackCandidateListBean;
 import bean.FeedbackFormColumnsBean;
 import bean.LoginDataBean;
+import bean.NewEnquiryFormBean;
 import bean.SetFeedbackFormBean;
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -99,5 +104,52 @@ public interface ApiInterface {
             @Field("enquiryId")String enquiryId
     );
 
+    @FormUrlEncoded
+    @POST("crm/get_client_list.php")
+    Call<CrmGetClientList> getClientList(
+            @Field("token")String token
+    );
+
+    @FormUrlEncoded
+    @POST("crm/get_client_details.php")
+    Call<CrmGetClientDetails> getClientDetails(
+            @Field("token")String token,
+            @Field("clientId")String clientId
+    );
+
+    @FormUrlEncoded
+    @POST("crm/get_department_list.php")
+    Call<CrmGetDepartmentList> getDepartmentList(
+            @Field("token")String token
+    );
+
+    @FormUrlEncoded
+    @POST("crm/get_employee_list.php")
+    Call<CrmGetEmployeeList> getEmployeeDetails(
+            @Field("token")String token,
+            @Field("departmentId")String departmentId
+    );
+
+    @FormUrlEncoded
+    @POST("crm/add_enquiry.php")
+    Call<NewEnquiryFormBean> setNewEnquiryForm(
+            @Field("token")String token,
+            @Field("callType")String callType,
+            @Field("date")String date,
+            @Field("clientType")String clientType,
+            @Field("companyName")String companyName,
+            @Field("location")String location,
+            @Field("address")String address,
+            @Field("client")String client,
+            @Field("designation")String designation,
+            @Field("mobile")String mobile,
+            @Field("email")String email,
+            @Field("product")String product,
+            @Field("feedback")String feedback,
+            @Field("followUp")String followUp,
+            @Field("department")String department,
+            @Field("employeeId")String employeeId,
+            @Field("createdBy")String createdBy
+    );
 
 }

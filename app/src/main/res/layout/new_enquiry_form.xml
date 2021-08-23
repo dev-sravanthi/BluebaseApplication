@@ -31,7 +31,7 @@
                 <util.MyCustomTextView_Bold
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Enquiry Form"
+                    android:text="New Enquiry Form"
                     android:layout_marginLeft="@dimen/_10sdp"
                     android:layout_marginRight="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_10sdp"
@@ -150,7 +150,6 @@
 
                         </LinearLayout>
 
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -178,14 +177,25 @@
                                 android:textColor="#000" />
 
                             <util.MyCustomEditText
-                                android:id="@+id/ed_date"
+                                android:id="@+id/ed_dp_date"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1.0"
-                                android:layout_marginRight="@dimen/_12sdp"
-                                android:background="@drawable/edittext_rounded_box"
+                                android:layout_weight="0.9"
+                                android:textSize="@dimen/_12ssp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
                                 android:layout_gravity="center"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:layout_marginTop="@dimen/_2sdp"/>
+
+                            <Button
+                                android:id="@+id/btn_dp_date"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:layout_gravity="end|center_vertical"
+                                android:background="@drawable/datepicker"/>
 
                         </LinearLayout>
 
@@ -215,15 +225,16 @@
                                 android:text=":"
                                 android:textColor="#000" />
 
-                            <util.MyCustomEditText
-                                android:id="@+id/ed_client"
+                            <Spinner
+                                android:id="@+id/spin_client"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
-                                android:background="@drawable/edittext_rounded_box"
+                                android:background="@drawable/spinner_border"
                                 android:layout_gravity="center"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:textSize="@dimen/_12ssp"/>
 
                         </LinearLayout>
 
@@ -261,7 +272,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:textSize="@dimen/_12ssp"/>
 
                         </LinearLayout>
 
@@ -299,7 +311,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:textSize="@dimen/_12ssp"/>
 
                         </LinearLayout>
 
@@ -337,7 +350,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:textSize="@dimen/_12ssp"/>
 
                         </LinearLayout>
 
@@ -375,7 +389,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:textSize="@dimen/_12ssp"/>
 
                         </LinearLayout>
 
@@ -413,7 +428,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:textSize="@dimen/_12ssp"/>
 
                         </LinearLayout>
 
@@ -451,7 +467,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:textSize="@dimen/_12ssp"/>
 
                         </LinearLayout>
 
@@ -489,7 +506,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:textSize="@dimen/_12ssp"/>
 
                         </LinearLayout>
 
@@ -527,7 +545,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:textSize="@dimen/_12ssp"/>
 
                         </LinearLayout>
 
@@ -558,19 +577,32 @@
                                 android:textColor="#000" />
 
                             <util.MyCustomEditText
-                                android:id="@+id/ed_followupdate"
+                                android:id="@+id/ed_dp_followupdate"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1.0"
-                                android:layout_marginRight="@dimen/_12sdp"
-                                android:background="@drawable/edittext_rounded_box"
+                                android:layout_weight="0.9"
+                                android:textSize="@dimen/_12ssp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
                                 android:layout_gravity="center"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:layout_marginTop="@dimen/_2sdp"/>
+
+                            <Button
+                                android:id="@+id/btn_dp_followupdate"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:layout_gravity="end|center_vertical"
+                                android:background="@drawable/datepicker"/>
 
                         </LinearLayout>
-
+<!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
                         <LinearLayout
+                            android:visibility="visible"
+                            android:id="@+id/ll_spin_assignto_department"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
@@ -582,7 +614,89 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
-                                android:text="Department"
+                                android:text="Assign to Department"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <Spinner
+                                android:id="@+id/spin_assignto_department"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/spinner_border"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="@dimen/_12ssp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:visibility="visible"
+                            android:id="@+id/ll_spin_assignto_employee"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Assign to Employee"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <Spinner
+                                android:id="@+id/spin_assignto_employee"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/spinner_border"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="@dimen/_12ssp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:visibility="visible"
+                            android:id="@+id/ll_acc_manager_dept"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Account Manager Department"
                                 android:textColor="@color/black"
                                 android:textSize="@dimen/_12ssp"
                                 android:layout_marginLeft="@dimen/_10sdp"/>
@@ -597,18 +711,22 @@
                                 android:textColor="#000" />
 
                             <util.MyCustomEditText
-                                android:id="@+id/ed_department"
+                                android:id="@+id/ed_account_manager_dept"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"/>
 
                         </LinearLayout>
 
                         <LinearLayout
+                            android:visibility="visible"
+                            android:id="@+id/ll_acc_manager"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
@@ -620,7 +738,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
-                                android:text="Employee Name"
+                                android:text="Account Manager"
                                 android:textColor="@color/black"
                                 android:textSize="@dimen/_12ssp"
                                 android:layout_marginLeft="@dimen/_10sdp"/>
@@ -635,16 +753,28 @@
                                 android:textColor="#000" />
 
                             <util.MyCustomEditText
-                                android:id="@+id/ed_employeename"
+                                android:id="@+id/ed_account_manager"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"/>
 
                         </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btn_submit_nef"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SUBMIT"
+                            android:background="@drawable/button_style"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_5sdp"/>
 
                     </LinearLayout>
 
