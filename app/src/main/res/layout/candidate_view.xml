@@ -105,7 +105,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -141,7 +143,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -213,7 +217,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -249,7 +255,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -285,7 +293,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -321,7 +331,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -357,7 +369,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -393,7 +407,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -429,7 +445,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -465,7 +483,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -501,7 +521,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -537,7 +559,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -573,7 +597,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -610,7 +636,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -646,7 +674,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -682,7 +712,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -718,7 +750,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -754,7 +788,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -790,7 +826,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -826,7 +864,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -903,7 +943,8 @@
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -982,7 +1023,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
                                 android:gravity="center"
-                                android:layout_marginTop="@dimen/_5sdp"/>
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -1021,7 +1063,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
                                 android:gravity="center"
-                                android:layout_marginTop="@dimen/_5sdp"/>
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -1100,7 +1143,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
                                 android:gravity="center"
-                                android:layout_marginTop="@dimen/_5sdp"/>
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -1139,7 +1183,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
                                 android:gravity="center"
-                                android:layout_marginTop="@dimen/_5sdp"/>
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -1258,7 +1303,8 @@
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -1374,7 +1420,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:layout_marginRight="@dimen/_12sdp"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 

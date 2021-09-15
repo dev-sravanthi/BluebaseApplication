@@ -55,6 +55,7 @@ public class CandidateView extends AppCompatActivity {
         token=i.getStringExtra("token");
         if(previousActivity.equals("CandidateList")){
             candidate_id=i.getStringExtra("candidateId");
+            login_id=i.getStringExtra("login_id");
         }else if(previousActivity.equals("FeedbackCandidateList")){
             candidate_id=i.getStringExtra("feedback_candidateId");
             login_id=i.getStringExtra("login_id");
@@ -121,6 +122,7 @@ public class CandidateView extends AppCompatActivity {
         ll_hod_feedback=findViewById(R.id.ll_hod_feedback);
 
         cv_md_feedback=findViewById(R.id.cv_md_feedback);
+        cv_md_feedback=findViewById(R.id.cv_md_feedback);
         text_md_feedback=findViewById(R.id.text_md_feedback);
         ll_md_feedback=findViewById(R.id.ll_md_feedback);
         ed_mdname=findViewById(R.id.ed_mdname);
@@ -146,46 +148,199 @@ public class CandidateView extends AppCompatActivity {
                     if(status_main.equals("true")){
                         CandidateViewBean.CV_candidateDetails cv_candidateDetails=candidateViewBean.getCv_candidateDetails();
 
-                        candidateStatus=cv_candidateDetails.getCandidateStatus();
-                        designationName=cv_candidateDetails.getDesignationName();
-                        deptName=cv_candidateDetails.getDeptName();
-                        firstName=cv_candidateDetails.getFirstName();
-                        lastName=cv_candidateDetails.getLastName();
-                        fatherName=cv_candidateDetails.getFatherName();
-                        gender=cv_candidateDetails.getGender();
-                        dob=cv_candidateDetails.getDob();
-                        address=cv_candidateDetails.getAddress();
-                        permanentAddress=cv_candidateDetails.getPermanentAddress();
-                        phone=cv_candidateDetails.getPhone();
-                        alternativePhone=cv_candidateDetails.getAlternativePhone();
-                        email=cv_candidateDetails.getEmail();
-                        aadharNo=cv_candidateDetails.getAadharNo();
-                        panNo=cv_candidateDetails.getPanNo();
-                        voterNo=cv_candidateDetails.getVoterNo();
-                        educationalDetails=cv_candidateDetails.getEducationalDetails();
-                        employeeStatus=cv_candidateDetails.getEmployeeStatus();
-                        yearOfPass=cv_candidateDetails.getYearOfPass();
+                        if(cv_candidateDetails.getCandidateStatus()==null || cv_candidateDetails.getCandidateStatus()==""){
+                            candidateStatus="Not Available";
+                        }else{
+                            candidateStatus=cv_candidateDetails.getCandidateStatus();
+                        }
+
+                        if(cv_candidateDetails.getDesignationName()==null || cv_candidateDetails.getDesignationName()==""){
+                            designationName="Not Available";
+                        }else{
+                            designationName=cv_candidateDetails.getDesignationName();
+                        }
+
+                        if(cv_candidateDetails.getDeptName()==null || cv_candidateDetails.getDeptName()==""){
+                            deptName="Not Available";
+                        }else{
+                            deptName=cv_candidateDetails.getDeptName();
+                        }
+
+                        if(cv_candidateDetails.getFirstName()==null || cv_candidateDetails.getFirstName()==""){
+                            firstName="Not Available";
+                        }else{
+                            firstName=cv_candidateDetails.getFirstName();
+                        }
+
+                        if(cv_candidateDetails.getLastName()==null || cv_candidateDetails.getLastName()==""){
+                            lastName="Not Available";
+                        }else{
+                            lastName=cv_candidateDetails.getLastName();
+                        }
+
+                        if(cv_candidateDetails.getFatherName()==null || cv_candidateDetails.getFatherName()==""){
+                            fatherName="Not Available";
+                        }else{
+                            fatherName=cv_candidateDetails.getFatherName();
+                        }
+
+                        if(cv_candidateDetails.getGender()==null || cv_candidateDetails.getGender()==""){
+                            gender="Not Available";
+                        }else{
+                            gender=cv_candidateDetails.getGender();
+                        }
+
+                        if(cv_candidateDetails.getDob()==null || cv_candidateDetails.getDob()==""){
+                            dob="Not Available";
+                        }else{
+                            dob=cv_candidateDetails.getDob();
+                        }
+
+                        if(cv_candidateDetails.getAddress()==null || cv_candidateDetails.getAddress()==""){
+                            address="Not Available";
+                        }else{
+                            address=cv_candidateDetails.getAddress();
+                        }
+
+                        if(cv_candidateDetails.getPermanentAddress()==null || cv_candidateDetails.getPermanentAddress()==""){
+                            permanentAddress="Not Available";
+                        }else{
+                            permanentAddress=cv_candidateDetails.getPermanentAddress();
+                        }
+
+                        if(cv_candidateDetails.getPhone()==null || cv_candidateDetails.getPhone()==""){
+                            phone="Not Available";
+                        }else{
+                            phone=cv_candidateDetails.getPhone();
+                        }
+
+                        if(cv_candidateDetails.getAlternativePhone()==null || cv_candidateDetails.getAlternativePhone()==""){
+                            alternativePhone="Not Available";
+                        }else{
+                            alternativePhone=cv_candidateDetails.getAlternativePhone();
+                        }
+
+                        if(cv_candidateDetails.getEmail()==null || cv_candidateDetails.getEmail()==""){
+                            email="Not Available";
+                        }else{
+                            email=cv_candidateDetails.getEmail();
+                        }
+
+                        if(cv_candidateDetails.getAadharNo()==null || cv_candidateDetails.getAadharNo()==""){
+                            aadharNo="Not Available";
+                        }else{
+                            aadharNo=cv_candidateDetails.getAadharNo();
+                        }
+
+                        if(cv_candidateDetails.getPanNo()==null || cv_candidateDetails.getPanNo()==""){
+                            panNo="Not Available";
+                        }else{
+                            panNo=cv_candidateDetails.getPanNo();
+                        }
+
+                        if(cv_candidateDetails.getVoterNo()==null || cv_candidateDetails.getVoterNo()==""){
+                            voterNo="Not Available";
+                        }else{
+                            voterNo=cv_candidateDetails.getVoterNo();
+                        }
+
+                        if(cv_candidateDetails.getEducationalDetails()==null || cv_candidateDetails.getEducationalDetails()==""){
+                            educationalDetails="Not Available";
+                        }else{
+                            educationalDetails=cv_candidateDetails.getEducationalDetails();
+                        }
+
+                        if(cv_candidateDetails.getEmployeeStatus()==null || cv_candidateDetails.getEmployeeStatus()==""){
+                            employeeStatus="Not Available";
+                        }else{
+                            employeeStatus=cv_candidateDetails.getEmployeeStatus();
+                        }
+
+                        if(cv_candidateDetails.getYearOfPass()==null || cv_candidateDetails.getYearOfPass()==""){
+                            yearOfPass="Not Available";
+                        }else{
+                            yearOfPass=cv_candidateDetails.getYearOfPass();
+                        }
 
                         ed_post_applied_for.setText(designationName);
+                        ed_post_applied_for.setEnabled(false);
+                        ed_post_applied_for.setBackgroundResource(R.drawable.editextbg);
+
                         ed_deparment.setText(deptName);
+                        ed_deparment.setEnabled(false);
+                        ed_deparment.setBackgroundResource(R.drawable.editextbg);
+
                         ed_firstname.setText(firstName);
+                        ed_firstname.setEnabled(false);
+                        ed_firstname.setBackgroundResource(R.drawable.editextbg);
+
                         ed_lastname.setText(lastName);
+                        ed_lastname.setEnabled(false);
+                        ed_lastname.setBackgroundResource(R.drawable.editextbg);
+
                         ed_gender.setText(gender);
+                        ed_gender.setEnabled(false);
+                        ed_gender.setBackgroundResource(R.drawable.editextbg);
+
                         ed_fathersname.setText(fatherName);
+                        ed_fathersname.setEnabled(false);
+                        ed_fathersname.setBackgroundResource(R.drawable.editextbg);
+
                         ed_dateofbirth.setText(dob);
+                        ed_dateofbirth.setEnabled(false);
+                        ed_dateofbirth.setBackgroundResource(R.drawable.editextbg);
+
                         ed_address_commun.setText(address);
+                        ed_address_commun.setEnabled(false);
+                        ed_address_commun.setBackgroundResource(R.drawable.editextbg);
+
                         ed_permanent_address.setText(permanentAddress);
+                        ed_permanent_address.setEnabled(false);
+                        ed_permanent_address.setBackgroundResource(R.drawable.editextbg);
+
                         ed_mob_no.setText(phone);
+                        ed_mob_no.setEnabled(false);
+                        ed_mob_no.setBackgroundResource(R.drawable.editextbg);
+
                         ed_alternate_mob_no.setText(alternativePhone);
+                        ed_alternate_mob_no.setEnabled(false);
+                        ed_alternate_mob_no.setBackgroundResource(R.drawable.editextbg);
+
                         ed_emailid.setText(email);
+                        ed_emailid.setEnabled(false);
+                        ed_emailid.setBackgroundResource(R.drawable.editextbg);
+
                         ed_aadhar_no.setText(aadharNo);
+                        ed_aadhar_no.setEnabled(false);
+                        ed_aadhar_no.setBackgroundResource(R.drawable.editextbg);
+
                         ed_pan_no.setText(panNo);
+                        ed_pan_no.setEnabled(false);
+                        ed_pan_no.setBackgroundResource(R.drawable.editextbg);
+
                         ed_voterid.setText(voterNo);
+                        ed_voterid.setEnabled(false);
+                        ed_voterid.setBackgroundResource(R.drawable.editextbg);
+
                         ed_education_details.setText(educationalDetails);
+                        ed_education_details.setEnabled(false);
+                        ed_education_details.setBackgroundResource(R.drawable.editextbg);
+
                         ed_emplstatus.setText(employeeStatus);
+                        ed_emplstatus.setEnabled(false);
+                        ed_emplstatus.setBackgroundResource(R.drawable.editextbg);
+
                         ed_yearofpassout.setText(yearOfPass);
+                        ed_yearofpassout.setEnabled(false);
+                        ed_yearofpassout.setBackgroundResource(R.drawable.editextbg);
+
                         ed_round.setText("");
+                        ed_round.setEnabled(false);
+                        ed_round.setBackgroundResource(R.drawable.editextbg);
+
                         ed_ques_name.setText("");
+                        ed_ques_name.setEnabled(false);
+                        ed_ques_name.setBackgroundResource(R.drawable.editextbg);
 
                         CandidateViewBean.CV_feedbacks cv_feedbacks=candidateViewBean.getCv_feedbacks();
                         aplitudeStatus=cv_feedbacks.getAplitudeStatus();
@@ -201,6 +356,8 @@ public class CandidateView extends AppCompatActivity {
                             text_feedback_apt.setText("Apptitude & Logical Marks");
 
                             ed_marks_scored.setText(totalMarks);
+                            ed_marks_scored.setEnabled(false);
+                            ed_marks_scored.setBackgroundResource(R.drawable.editextbg);
                         }
 
                         if(technicalStatus.equals("true")){
@@ -213,6 +370,10 @@ public class CandidateView extends AppCompatActivity {
 
                             ed_technicalname.setText(technicalName);
                             ed_deptname.setText(departmentName);
+                            ed_technicalname.setEnabled(false);
+                            ed_technicalname.setBackgroundResource(R.drawable.editextbg);
+                            ed_deptname.setEnabled(false);
+                            ed_deptname.setBackgroundResource(R.drawable.editextbg);
 
                             List<CandidateViewBean.CV_feedbacks.Feedback_technicalStatus.technicalFeedback> technicalFeedbackList=
                                     feedback_technicalStatus.getTechnicalFeedbackList();
@@ -229,7 +390,7 @@ public class CandidateView extends AppCompatActivity {
                                     myRoot.setOrientation(LinearLayout.VERTICAL);
 
                                     LinearLayout ll_child = new LinearLayout(CandidateView.this);
-                                    ll_child.setOrientation(LinearLayout.HORIZONTAL);
+                                    ll_child.setOrientation(LinearLayout.VERTICAL);
                                     LinearLayout.LayoutParams attributLayoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
                                             LinearLayout.LayoutParams.WRAP_CONTENT);
                                     attributLayoutParams.gravity = Gravity.CENTER;
@@ -241,6 +402,8 @@ public class CandidateView extends AppCompatActivity {
 
                                     LinearLayout.LayoutParams leftLabelParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
                                             LinearLayout.LayoutParams.WRAP_CONTENT,1.0f);
+                                    leftLabelParams.gravity = Gravity.LEFT;
+                                    leftLabelParams.setMargins(0,0,0,30);
                                     TextView textView = new TextView(CandidateView.this);
                                     textView.setText(sectionName);
                                     textView.setTextSize(18);
@@ -248,13 +411,16 @@ public class CandidateView extends AppCompatActivity {
                                     textView.setTypeface(typeface,Typeface.BOLD);
                                     textView.setLayoutParams(leftLabelParams);
 
-                                    LinearLayout.LayoutParams ed_params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
+                                    LinearLayout.LayoutParams ed_params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
                                             LinearLayout.LayoutParams.WRAP_CONTENT,1.0f);
                                     EditText editText = new EditText(CandidateView.this);
-                                    ed_params.gravity=Gravity.LEFT;
+                                    ed_params.gravity=Gravity.CENTER;
+                                    editText.setTextSize(18);
                                     editText.setLayoutParams(ed_params);
-                                    editText.setBackgroundResource(R.drawable.edittext_rounded_box);
                                     editText.setText(feedBack);
+                                    editText.setBackgroundResource(R.drawable.editextbg);
+                                    editText.setEnabled(false);
+                                    editText.setTextColor(Color.parseColor("#000000"));
 
                                     ll_child.addView(textView);
                                     ll_child.addView(editText);
@@ -275,58 +441,68 @@ public class CandidateView extends AppCompatActivity {
                             text_hodstatus.setText("HOD Department");
 
                             ed_hodname.setText(hodName);
+                            ed_hodname.setEnabled(false);
+                            ed_hodname.setBackgroundResource(R.drawable.editextbg);
 
-                            List<CandidateViewBean.CV_feedbacks.Feedback_hod.hodFeedback> feedback_hodList=
-                                    feedback_hod.getHodFeedbackList();
 
-                            if(feedback_hodList.size()>0){
+                            if(feedback_hod.getHodFeedbackList()!=null){
+                                List<CandidateViewBean.CV_feedbacks.Feedback_hod.hodFeedback> feedback_hodList=
+                                        feedback_hod.getHodFeedbackList();
 
-                                cv_hod_feedback.setVisibility(View.VISIBLE);
-                                text_hod_feedback.setText("HOD Feedback Details");
-                                for(int i=0;i<feedback_hodList.size();i++){
-                                    sectionName=feedback_hodList.get(i).getSectionName();
-                                    feedBack=feedback_hodList.get(i).getFeedBack();
+                                if(feedback_hodList.size()>0){
 
-                                    LinearLayout myRoot = (LinearLayout) findViewById(R.id.ll_hod_feedback);
-                                    myRoot.setOrientation(LinearLayout.VERTICAL);
+                                    cv_hod_feedback.setVisibility(View.VISIBLE);
+                                    text_hod_feedback.setText("HOD Feedback Details");
+                                    for(int i=0;i<feedback_hodList.size();i++){
+                                        sectionName=feedback_hodList.get(i).getSectionName();
+                                        feedBack=feedback_hodList.get(i).getFeedBack();
 
-                                    LinearLayout ll_child = new LinearLayout(CandidateView.this);
-                                    ll_child.setOrientation(LinearLayout.HORIZONTAL);
-                                    LinearLayout.LayoutParams attributLayoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
-                                            LinearLayout.LayoutParams.WRAP_CONTENT);
-                                    attributLayoutParams.gravity = Gravity.CENTER;
-                                    attributLayoutParams.setMargins(70,60,70,0);
-                                    ll_child.setLayoutParams(attributLayoutParams);
-                                    ll_child.setGravity(Gravity.CENTER);
+                                        LinearLayout myRoot = (LinearLayout) findViewById(R.id.ll_hod_feedback);
+                                        myRoot.setOrientation(LinearLayout.VERTICAL);
 
-                                    Typeface typeface =  Typeface.createFromAsset(getAssets(),"Sansation-Bold.ttf");
+                                        LinearLayout ll_child = new LinearLayout(CandidateView.this);
+                                        ll_child.setOrientation(LinearLayout.VERTICAL);
+                                        LinearLayout.LayoutParams attributLayoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                                                LinearLayout.LayoutParams.WRAP_CONTENT);
+                                        attributLayoutParams.gravity = Gravity.CENTER;
+                                        attributLayoutParams.setMargins(70,60,70,0);
+                                        ll_child.setLayoutParams(attributLayoutParams);
+                                        ll_child.setGravity(Gravity.CENTER);
 
-                                    LinearLayout.LayoutParams leftLabelParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
-                                            LinearLayout.LayoutParams.WRAP_CONTENT,1.0f);
-                                    TextView textView = new TextView(CandidateView.this);
-                                    textView.setText(sectionName);
-                                    textView.setTextSize(18);
-                                    textView.setTextColor(Color.parseColor("#000000"));
-                                    textView.setTypeface(typeface,Typeface.BOLD);
-                                    textView.setLayoutParams(leftLabelParams);
+                                        Typeface typeface =  Typeface.createFromAsset(getAssets(),"Sansation-Bold.ttf");
 
-                                    LinearLayout.LayoutParams ed_params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
-                                            LinearLayout.LayoutParams.WRAP_CONTENT,1.0f);
-                                    EditText editText = new EditText(CandidateView.this);
-                                    ed_params.gravity=Gravity.LEFT;
-                                    editText.setLayoutParams(ed_params);
-                                    editText.setBackgroundResource(R.drawable.edittext_rounded_box);
-                                    editText.setText(feedBack);
+                                        LinearLayout.LayoutParams leftLabelParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
+                                                LinearLayout.LayoutParams.WRAP_CONTENT,1.0f);
+                                        leftLabelParams.gravity = Gravity.LEFT;
+                                        leftLabelParams.setMargins(0,0,0,30);
+                                        TextView textView = new TextView(CandidateView.this);
+                                        textView.setText(sectionName);
+                                        textView.setTextSize(18);
+                                        textView.setTextColor(Color.parseColor("#000000"));
+                                        textView.setTypeface(typeface,Typeface.BOLD);
+                                        textView.setLayoutParams(leftLabelParams);
 
-                                    ll_child.addView(textView);
-                                    ll_child.addView(editText);
+                                        LinearLayout.LayoutParams ed_params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                                                LinearLayout.LayoutParams.WRAP_CONTENT,1.0f);
+                                        EditText editText = new EditText(CandidateView.this);
+                                        ed_params.gravity=Gravity.CENTER;
+                                        editText.setTextSize(18);
+                                        editText.setLayoutParams(ed_params);
+                                        editText.setText(feedBack);
+                                        editText.setBackgroundResource(R.drawable.editextbg);
+                                        editText.setEnabled(false);
+                                        editText.setTextColor(Color.parseColor("#000000"));
 
-                                    ll_hod_feedback.addView(ll_child);
+                                        ll_child.addView(textView);
+                                        ll_child.addView(editText);
+
+                                        ll_hod_feedback.addView(ll_child);
+
+                                    }
 
                                 }
 
                             }
-
                         }
 
                         if(mdStatus.equals("true")){
@@ -335,58 +511,68 @@ public class CandidateView extends AppCompatActivity {
 
                             cv_mdstatus.setVisibility(View.VISIBLE);
                             ed_mdname.setText(mdName);
+                            ed_mdname.setEnabled(false);
+                            ed_mdname.setBackgroundResource(R.drawable.editextbg);
 
-                            List<CandidateViewBean.CV_feedbacks.Feedback_md.mdFeedback> mdFeedbackList=
-                                    feedback_md.getMdFeedbackList();
+                            if(feedback_md.getMdFeedbackList()!=null){
+                                List<CandidateViewBean.CV_feedbacks.Feedback_md.mdFeedback> mdFeedbackList=
+                                        feedback_md.getMdFeedbackList();
 
+                                if(mdFeedbackList.size()>0){
 
-                            if(mdFeedbackList.size()>0){
+                                    cv_md_feedback.setVisibility(View.VISIBLE);
+                                    text_md_feedback.setText("MD Feedback Details");
+                                    for(int i=0;i<mdFeedbackList.size();i++){
+                                        sectionName=mdFeedbackList.get(i).getSectionName();
+                                        feedBack=mdFeedbackList.get(i).getFeedBack();
 
-                                cv_md_feedback.setVisibility(View.VISIBLE);
-                                text_md_feedback.setText("MD Feedback Details");
-                                for(int i=0;i<mdFeedbackList.size();i++){
-                                    sectionName=mdFeedbackList.get(i).getSectionName();
-                                    feedBack=mdFeedbackList.get(i).getFeedBack();
+                                        LinearLayout myRoot = (LinearLayout) findViewById(R.id.ll_md_feedback);
+                                        myRoot.setOrientation(LinearLayout.VERTICAL);
 
-                                    LinearLayout myRoot = (LinearLayout) findViewById(R.id.ll_md_feedback);
-                                    myRoot.setOrientation(LinearLayout.VERTICAL);
+                                        LinearLayout ll_child = new LinearLayout(CandidateView.this);
+                                        ll_child.setOrientation(LinearLayout.VERTICAL);
+                                        LinearLayout.LayoutParams attributLayoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                                                LinearLayout.LayoutParams.WRAP_CONTENT);
+                                        attributLayoutParams.gravity = Gravity.CENTER;
+                                        attributLayoutParams.setMargins(70,60,70,0);
+                                        ll_child.setLayoutParams(attributLayoutParams);
+                                        ll_child.setGravity(Gravity.CENTER);
 
-                                    LinearLayout ll_child = new LinearLayout(CandidateView.this);
-                                    ll_child.setOrientation(LinearLayout.HORIZONTAL);
-                                    LinearLayout.LayoutParams attributLayoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
-                                            LinearLayout.LayoutParams.WRAP_CONTENT);
-                                    attributLayoutParams.gravity = Gravity.CENTER;
-                                    attributLayoutParams.setMargins(70,60,70,0);
-                                    ll_child.setLayoutParams(attributLayoutParams);
-                                    ll_child.setGravity(Gravity.CENTER);
+                                        Typeface typeface =  Typeface.createFromAsset(getAssets(),"Sansation-Bold.ttf");
 
-                                    Typeface typeface =  Typeface.createFromAsset(getAssets(),"Sansation-Bold.ttf");
+                                        LinearLayout.LayoutParams leftLabelParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
+                                                LinearLayout.LayoutParams.WRAP_CONTENT,1.0f);
+                                        leftLabelParams.gravity = Gravity.LEFT;
+                                        leftLabelParams.setMargins(0,0,0,30);
+                                        TextView textView = new TextView(CandidateView.this);
+                                        textView.setText(sectionName);
+                                        textView.setTextSize(18);
+                                        textView.setTextColor(Color.parseColor("#000000"));
+                                        textView.setTypeface(typeface,Typeface.BOLD);
+                                        textView.setLayoutParams(leftLabelParams);
 
-                                    LinearLayout.LayoutParams leftLabelParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
-                                            LinearLayout.LayoutParams.WRAP_CONTENT,1.0f);
-                                    TextView textView = new TextView(CandidateView.this);
-                                    textView.setText(sectionName);
-                                    textView.setTextSize(18);
-                                    textView.setTextColor(Color.parseColor("#000000"));
-                                    textView.setTypeface(typeface,Typeface.BOLD);
-                                    textView.setLayoutParams(leftLabelParams);
+                                        LinearLayout.LayoutParams ed_params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                                                LinearLayout.LayoutParams.WRAP_CONTENT,1.0f);
+                                        EditText editText = new EditText(CandidateView.this);
+                                        ed_params.gravity=Gravity.CENTER;
+                                        editText.setTextSize(18);
+                                        editText.setLayoutParams(ed_params);
+                                        editText.setText(feedBack);
+                                        editText.setBackgroundResource(R.drawable.editextbg);
+                                        editText.setEnabled(false);
+                                        editText.setTextColor(Color.parseColor("#000000"));
 
-                                    LinearLayout.LayoutParams ed_params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
-                                            LinearLayout.LayoutParams.WRAP_CONTENT,1.0f);
-                                    EditText editText = new EditText(CandidateView.this);
-                                    ed_params.gravity=Gravity.LEFT;
-                                    editText.setLayoutParams(ed_params);
-                                    editText.setBackgroundResource(R.drawable.edittext_rounded_box);
-                                    editText.setText(feedBack);
+                                        ll_child.addView(textView);
+                                        ll_child.addView(editText);
 
-                                    ll_child.addView(textView);
-                                    ll_child.addView(editText);
+                                        ll_md_feedback.addView(ll_child);
 
-                                    ll_md_feedback.addView(ll_child);
+                                    }
 
                                 }
 
                             }
+
 
                         }
                     }else{
@@ -497,6 +683,7 @@ public class CandidateView extends AppCompatActivity {
         if(previousActivity.equals("CandidateList")){
             Intent MainActivity = new Intent(getBaseContext(), CandidateList.class);
             MainActivity.putExtra("token",token);
+            MainActivity.putExtra("login_id",login_id);
             MainActivity.addCategory(Intent.CATEGORY_HOME);
             MainActivity.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(MainActivity);

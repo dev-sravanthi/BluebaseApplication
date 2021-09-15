@@ -1,6 +1,6 @@
 package bean;
 
-public class NewEnquiryFormBean {
+public class    NewEnquiryFormBean {
     private String status,status_message;
 
     public String getStatus() {

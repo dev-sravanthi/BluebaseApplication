@@ -75,7 +75,6 @@ public class QuotationGeneratedForm extends AppCompatActivity {
         enquiryId=i.getStringExtra("enquiryId");
         login_id=i.getStringExtra("login_id");
 
-        System.out.println("token===="+token+" ===== "+enquiryId);
 
         ScrollTextView scrolltext=findViewById(R.id.scrolltext);
         scrolltext.setText(R.string.footer);
@@ -162,27 +161,105 @@ public class QuotationGeneratedForm extends AppCompatActivity {
                     if(status.equals("true")){
                         CostSheetViewBean.CS_EnquiryDetails cs_enquiryDetails=costSheetViewBean.getCs_enquiryDetails();
 
-                        proposal=cs_enquiryDetails.getProposal();
-                        client=cs_enquiryDetails.getClient();
-                        date=cs_enquiryDetails.getDate();
-                        version=cs_enquiryDetails.getVersion();
-                        empName=cs_enquiryDetails.getEmpName();
-                        emailId=cs_enquiryDetails.getEmailId();
-                        telephoneNo=cs_enquiryDetails.getTelephoneNo();
-                        scope=cs_enquiryDetails.getScope();
-                        proposalStatement=cs_enquiryDetails.getProposalStatement();
-                        termsAndConditions=cs_enquiryDetails.getTermsAndConditions();
+                        if(cs_enquiryDetails.getProposal()==null || cs_enquiryDetails.getProposal()==""){
+                            proposal="Not Available";
+                        }else{
+                            proposal=cs_enquiryDetails.getProposal();
+                        }
+
+                        if(cs_enquiryDetails.getClient()==null || cs_enquiryDetails.getClient()==""){
+                            client="Not Available";
+                        }else{
+                            client=cs_enquiryDetails.getClient();
+                        }
+
+                        if(cs_enquiryDetails.getDate()==null || cs_enquiryDetails.getDate()==""){
+                            date="Not Available";
+                        }else{
+                            date=cs_enquiryDetails.getDate();
+                        }
+
+                        if(cs_enquiryDetails.getVersion()==null || cs_enquiryDetails.getVersion()==""){
+                            version="Not Available";
+                        }else{
+                            version=cs_enquiryDetails.getVersion();
+                        }
+
+                        if(cs_enquiryDetails.getEmpName()==null || cs_enquiryDetails.getEmpName()==""){
+                            empName="Not Available";
+                        }else{
+                            empName=cs_enquiryDetails.getEmpName();
+                        }
+
+                        if(cs_enquiryDetails.getEmailId()==null || cs_enquiryDetails.getEmailId()==""){
+                            emailId="Not Available";
+                        }else{
+                            emailId=cs_enquiryDetails.getEmailId();
+                        }
+
+                        if(cs_enquiryDetails.getTelephoneNo()==null || cs_enquiryDetails.getTelephoneNo()==""){
+                            telephoneNo="Not Available";
+                        }else{
+                            telephoneNo=cs_enquiryDetails.getTelephoneNo();
+                        }
+
+                        if(cs_enquiryDetails.getScope()==null || cs_enquiryDetails.getScope()==""){
+                            scope="Not Available";
+                        }else{
+                            scope=cs_enquiryDetails.getScope();
+                        }
+
+                        if(cs_enquiryDetails.getProposalStatement()==null || cs_enquiryDetails.getProposalStatement()==""){
+                            proposalStatement="Not Available";
+                        }else{
+                            proposalStatement=cs_enquiryDetails.getProposalStatement();
+                        }
+
+                        if(cs_enquiryDetails.getTermsAndConditions()==null || cs_enquiryDetails.getTermsAndConditions()==""){
+                            termsAndConditions="Not Available";
+                        }else{
+                            termsAndConditions=cs_enquiryDetails.getTermsAndConditions();
+                        }
 
                         ed_proposal_for.setText(proposal);
+                        ed_proposal_for.setEnabled(false);
+                        ed_proposal_for.setBackgroundResource(R.drawable.editextbg);
+
                         ed_client.setText(client);
+                        ed_client.setEnabled(false);
+                        ed_client.setBackgroundResource(R.drawable.editextbg);
+
                         ed_proposal_date.setText(date);
+                        ed_proposal_date.setEnabled(false);
+                        ed_proposal_date.setBackgroundResource(R.drawable.editextbg);
+
                         ed_version.setText(version);
+                        ed_version.setEnabled(false);
+                        ed_version.setBackgroundResource(R.drawable.editextbg);
+
                         ed_emp_name.setText(empName);
+                        ed_emp_name.setEnabled(false);
+                        ed_emp_name.setBackgroundResource(R.drawable.editextbg);
+
                         ed_emp_emailid.setText(emailId);
+                        ed_emp_emailid.setEnabled(false);
+                        ed_emp_emailid.setBackgroundResource(R.drawable.editextbg);
+
                         ed_emp_telephone_no.setText(telephoneNo);
+                        ed_emp_telephone_no.setEnabled(false);
+                        ed_emp_telephone_no.setBackgroundResource(R.drawable.editextbg);
+
                         ed_scope_statement.setText(scope);
+                        ed_scope_statement.setEnabled(false);
+                        ed_scope_statement.setBackgroundResource(R.drawable.editextbg);
+
                         ed_proposal_bb.setText(proposalStatement);
+                        ed_proposal_bb.setEnabled(false);
+                        ed_proposal_bb.setBackgroundResource(R.drawable.editextbg);
+
                         ed_terms_conditions.setText(termsAndConditions);
+                        ed_terms_conditions.setEnabled(false);
+                        ed_terms_conditions.setBackgroundResource(R.drawable.editextbg);
 
                         List<CostSheetViewBean.CS_Phases> cs_phasesList=costSheetViewBean.getCs_phasesList();
                         for(int i=0;i<cs_phasesList.size();i++){

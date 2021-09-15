@@ -17,6 +17,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 import bean.LoginDataBean;
 import data.repo.RetrofitClient;
@@ -33,7 +35,7 @@ public class LoginScreen extends AppCompatActivity {
     boolean networkAvailability=false;
     AlertDialog.Builder builder;
     ProgressDialog progressDialog;
-    String status,token,candidateId,empName,email,deptId,deptName,roleId,roleName,status_message;
+    String status,token,candidateId,empName,email,deptId,deptName,roleId,roleName,status_message,st_pwd_mdhash;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,9 +61,6 @@ public class LoginScreen extends AppCompatActivity {
         ed_username=findViewById(R.id.ed_username);
         ed_password=findViewById(R.id.ed_password);
 
-        ed_username.setText("Rajeshwari");
-        ed_password.setText("cd84d683cc5612c69efe115c80d0b7dc");
-
         btn_login=findViewById(R.id.btn_login);
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,7 +77,7 @@ public class LoginScreen extends AppCompatActivity {
                     Utility.getAlertMsgEnter(LoginScreen.this,"Password");
                     return;
                 }
-
+                st_pwd_mdhash=md5(st_ed_password);
                 checkLogin();
 
             }
@@ -86,11 +85,37 @@ public class LoginScreen extends AppCompatActivity {
 
     }
 
+    public static String md5(final String s) {
+        final String MD5 = "MD5";
+        try {
+            // Create MD5 Hash
+            MessageDigest digest = java.security.MessageDigest
+                    .getInstance(MD5);
+            digest.update(s.getBytes());
+            byte messageDigest[] = digest.digest();
+
+            // Create Hex String
+            StringBuilder hexString = new StringBuilder();
+            for (byte aMessageDigest : messageDigest) {
+                String h = Integer.toHexString(0xFF & aMessageDigest);
+                while (h.length() < 2)
+                    h = "0" + h;
+                hexString.append(h);
+            }
+            return hexString.toString();
+
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
+
+
     private void checkLogin() {
         showBar();
 
         Call<LoginDataBean> call=RetrofitClient.getInstance().getApi().checkLogin(st_ed_username,
-                st_ed_password);
+                st_pwd_mdhash);
         call.enqueue(new Callback<LoginDataBean>() {
 
             @Override
@@ -135,7 +160,6 @@ public class LoginScreen extends AppCompatActivity {
                                 .show();
                     }
 
-
                 }else{
                     progressDialog.dismiss();
                     JSONObject jObjError = null;
@@ -171,7 +195,7 @@ public class LoginScreen extends AppCompatActivity {
                 new android.app.AlertDialog.Builder(LoginScreen.this)
                         .setCancelable(false)
                         .setTitle("Error")
-                        .setMessage(status_message)
+                        .setMessage(t.getMessage())
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -199,4 +223,35 @@ public class LoginScreen extends AppCompatActivity {
             progressDialog.dismiss();
         }
     }
+
+    private void displayToast() {
+        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(LoginScreen.this);
+        builder.setTitle("Confirmation");
+        builder.setIcon(R.drawable.stop_sign);
+        builder.setMessage("Are you sure to quit from this APP?")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        Intent homeIntent = new Intent(Intent.ACTION_MAIN);
+                        homeIntent.addCategory( Intent.CATEGORY_HOME );
+                        homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(homeIntent);
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+        android.app.AlertDialog alert = builder.create();
+        alert.show();
+    }
+
+    private Boolean exit = false;
+    @Override
+    public void onBackPressed() {
+
+        displayToast();
+    }
+
 }

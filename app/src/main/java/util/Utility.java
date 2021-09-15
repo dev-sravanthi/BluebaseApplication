@@ -81,8 +81,7 @@ public class Utility {
                 .setPositiveButton("OK",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
-                                Intent i=new Intent(context,LoginScreen.class);
-                                context.startActivity(i);
+                                dialog.dismiss();
                             }
                         });
         final AlertDialog alert = builder.create();
@@ -90,6 +89,7 @@ public class Utility {
         alert.show();
 
     }
+
 
     public static void showMessageDialogue(Context context, String messageTxt, String argTitle) {
         new AlertDialog.Builder(context)

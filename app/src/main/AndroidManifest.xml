@@ -15,7 +15,7 @@
         android:theme="@style/AppTheme"
         android:hardwareAccelerated="false"
         android:usesCleartextTraffic="true">
-        <activity android:name="activities.NewEnquiryForm">
+        <activity android:name="activities.LoginScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -28,7 +28,11 @@
         <activity android:name="activities.InterviewFeedbackForm"/>
         <activity android:name="activities.CostSheet"/>
         <activity android:name="activities.QuotationGeneratedForm"/>
-<!--        <activity android:name="activities.EnquiryFormView"/>-->
+        <activity android:name="activities.EnquiryCandidateList"/>
+        <activity android:name="activities.EnquiryFormView"/>
+        <activity android:name="activities.NewEnquiryForm"/>
+        <activity android:name="activities.CRMMenu"/>
 
     </application>
+
 </manifest>

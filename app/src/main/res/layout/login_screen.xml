@@ -123,9 +123,9 @@
                             android:layout_marginTop="@dimen/_15sdp"
                             android:paddingLeft="@dimen/_30sdp"
                             android:paddingRight="@dimen/_30sdp"
-                            android:paddingTop="@dimen/_10sdp"
-                            android:paddingBottom="@dimen/_10sdp"
-                            android:textSize="@dimen/_18ssp"
+                            android:paddingTop="@dimen/_8sdp"
+                            android:paddingBottom="@dimen/_8sdp"
+                            android:textSize="@dimen/_16ssp"
                             android:layout_marginBottom="@dimen/_15sdp"/>
 
 

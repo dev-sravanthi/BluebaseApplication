@@ -53,8 +53,6 @@ public class CostSheet extends AppCompatActivity {
         token=i.getStringExtra("token");
         login_id=i.getStringExtra("login_id");
 
-        System.out.println(token+" ====== "+login_id);
-
         ScrollTextView scrolltext=findViewById(R.id.scrolltext);
         scrolltext.setText(R.string.footer);
         scrolltext.startScroll();
@@ -94,8 +92,6 @@ public class CostSheet extends AppCompatActivity {
                     CostSheetListBean costSheetListBean=response.body();
                     status=costSheetListBean.getStatus();
 
-                    System.out.println("status===="+status);
-
                     if(status.equals("true")){
                         List<CostSheetListBean.CostSheetListResultBean> costSheetListResultBeans=
                                 costSheetListBean.getCostSheetListResultBeanList();
@@ -111,8 +107,6 @@ public class CostSheet extends AppCompatActivity {
                             department=costSheetListResultBeans.get(i).getDepartment();
                             employee=costSheetListResultBeans.get(i).getEmployee();
                             resultstatus=costSheetListResultBeans.get(i).getStatus();
-
-                            System.out.println("resultstatus===="+resultstatus);
 
                             CostSheetAdapterBean costSheetAdapterBean=new CostSheetAdapterBean(enquiryId,callType,date,companyName,location,contactNumber,followUpDate,department,
                                     employee,resultstatus);
@@ -239,7 +233,7 @@ public class CostSheet extends AppCompatActivity {
             holder.text_department.setText(data.getDepartment());
             holder.text_employee.setText(data.getEmployee());
             holder.text_status.setText(data.getResultstatus());
-            holder.img_eye_view.setImageResource(R.drawable.eye_view_icon);
+            holder.img_eye_view.setImageResource(R.drawable.view);
             holder.img_eye_view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -376,7 +370,7 @@ public class CostSheet extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent MainActivity = new Intent(getBaseContext(), MenuScreen.class);
+        Intent MainActivity = new Intent(getBaseContext(), CRMMenu.class);
         MainActivity.putExtra("token",token);
         MainActivity.putExtra("login_id",login_id);
         MainActivity.addCategory(Intent.CATEGORY_HOME);

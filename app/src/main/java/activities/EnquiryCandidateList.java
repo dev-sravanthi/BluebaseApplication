@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -41,6 +42,7 @@ public class EnquiryCandidateList extends AppCompatActivity {
     List<EnquiryCanListAdapterBean> enquiryCanListAdapterBeanList=new ArrayList<>();
     AlertDialog.Builder builder;
     ProgressDialog progressDialog;
+    Button btn_newenquiryform;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,8 +52,6 @@ public class EnquiryCandidateList extends AppCompatActivity {
         Intent i=getIntent();
         token=i.getStringExtra("token");
         login_id=i.getStringExtra("login_id");
-
-        System.out.println(token+" ====== "+login_id);
 
         ScrollTextView scrolltext=findViewById(R.id.scrolltext);
         scrolltext.setText(R.string.footer);
@@ -69,6 +69,19 @@ public class EnquiryCandidateList extends AppCompatActivity {
     }
 
     private void findviewids() {
+
+        btn_newenquiryform=findViewById(R.id.btn_newenquiryform);
+        btn_newenquiryform.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(EnquiryCandidateList.this,NewEnquiryForm.class);
+                i.putExtra("token",token);
+                i.putExtra("login_id",login_id);
+                startActivity(i);
+                finish();
+            }
+        });
+
         recyview_costlist=findViewById(R.id.recyview_costlist);
         recyview_costlist.setHasFixedSize(true);
         enquiryCanListAdapter = new EnquiryCanListAdapter(enquiryCanListAdapterBeanList);
@@ -82,7 +95,7 @@ public class EnquiryCandidateList extends AppCompatActivity {
 
     private void loadJSON() {
         showBar();
-        Call<CrmEnquiryListBean> call= RetrofitClient.getInstance().getApi().getCrmEnquiryList("c33f17bfd02f8496665c1e0a0c2248df");
+        Call<CrmEnquiryListBean> call= RetrofitClient.getInstance().getApi().getCrmEnquiryList(token);
         call.enqueue(new Callback<CrmEnquiryListBean>() {
 
             @Override
@@ -98,15 +111,59 @@ public class EnquiryCandidateList extends AppCompatActivity {
                                 crmEnquiryListBean.getCrmEnqResultListList();
 
                         for(int i=0;i<crmEnqResultLists.size();i++){
-                            enquiryId=crmEnqResultLists.get(i).getEnquiryId();
-                            callType=crmEnqResultLists.get(i).getCallType();
-                            date=crmEnqResultLists.get(i).getDate();
-                            client=crmEnqResultLists.get(i).getClient();
-                            location=crmEnqResultLists.get(i).getLocation();
-                            contactNumber=crmEnqResultLists.get(i).getContactNumber();
-                            followUpDate=crmEnqResultLists.get(i).getFollowUpDate();
-                            employee=crmEnqResultLists.get(i).getEmployee();
-                            resstatus=crmEnqResultLists.get(i).getStatus();
+                            if(crmEnqResultLists.get(i).getEnquiryId()==null || crmEnqResultLists.get(i).getEnquiryId()==""){
+                                enquiryId="Not Available";
+                            }else{
+                                enquiryId=crmEnqResultLists.get(i).getEnquiryId();
+                            }
+
+                            if(crmEnqResultLists.get(i).getCallType()==null || crmEnqResultLists.get(i).getCallType()==""){
+                                callType="Not Available";
+                            }else{
+                                callType=crmEnqResultLists.get(i).getCallType();
+                            }
+
+                            if(crmEnqResultLists.get(i).getDate()==null || crmEnqResultLists.get(i).getDate()==""){
+                                date="Not Available";
+                            }else{
+                                date=crmEnqResultLists.get(i).getDate();
+                            }
+
+                            if(crmEnqResultLists.get(i).getClient()==null || crmEnqResultLists.get(i).getClient()==""){
+                                client="Not Available";
+                            }else{
+                                client=crmEnqResultLists.get(i).getClient();
+                            }
+
+                            if(crmEnqResultLists.get(i).getLocation()==null || crmEnqResultLists.get(i).getLocation()==""){
+                                location="Not Available";
+                            }else{
+                                location=crmEnqResultLists.get(i).getLocation();
+                            }
+
+                            if(crmEnqResultLists.get(i).getContactNumber()==null || crmEnqResultLists.get(i).getContactNumber()==""){
+                                contactNumber="Not Available";
+                            }else{
+                                contactNumber=crmEnqResultLists.get(i).getContactNumber();
+                            }
+
+                            if(crmEnqResultLists.get(i).getFollowUpDate()==null || crmEnqResultLists.get(i).getFollowUpDate()==""){
+                                followUpDate="Not Available";
+                            }else{
+                                followUpDate=crmEnqResultLists.get(i).getFollowUpDate();
+                            }
+
+                            if(crmEnqResultLists.get(i).getEmployee()==null || crmEnqResultLists.get(i).getEmployee()==""){
+                                employee="Not Available";
+                            }else{
+                                employee=crmEnqResultLists.get(i).getEmployee();
+                            }
+
+                            if(crmEnqResultLists.get(i).getStatus()==null || crmEnqResultLists.get(i).getStatus()==""){
+                                resstatus="Not Available";
+                            }else{
+                                resstatus=crmEnqResultLists.get(i).getStatus();
+                            }
 
                             EnquiryCanListAdapterBean enquiryCanListAdapterBean=new EnquiryCanListAdapterBean(enquiryId,callType,date,client,location,contactNumber,followUpDate,
                                     employee,resstatus);
@@ -358,7 +415,7 @@ public class EnquiryCandidateList extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent MainActivity = new Intent(getBaseContext(), MenuScreen.class);
+        Intent MainActivity = new Intent(getBaseContext(), CRMMenu.class);
         MainActivity.putExtra("token",token);
         MainActivity.putExtra("login_id",login_id);
         MainActivity.addCategory(Intent.CATEGORY_HOME);

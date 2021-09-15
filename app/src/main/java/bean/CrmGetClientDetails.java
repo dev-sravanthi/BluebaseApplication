@@ -34,7 +34,15 @@ public class CrmGetClientDetails {
     }
 
     public class CGCD_ClientDetails{
-        private String address,city,clientName,designation,mobileNo,email,deptName,empName;
+        private String address,city,clientName,designation,mobileNo,email,deptName,empName,createdBy;
+
+        public String getCreatedBy() {
+            return createdBy;
+        }
+
+        public void setCreatedBy(String createdBy) {
+            this.createdBy = createdBy;
+        }
 
         public String getAddress() {
             return address;

@@ -107,7 +107,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:layout_gravity="center"
                                 android:gravity="center"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -145,7 +146,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:layout_gravity="center"
                                 android:gravity="center"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -183,7 +185,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:layout_gravity="center"
                                 android:gravity="center"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -221,7 +224,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:layout_gravity="center"
                                 android:gravity="center"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -259,7 +263,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:layout_gravity="center"
                                 android:gravity="center"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -297,7 +302,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:layout_gravity="center"
                                 android:gravity="center"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -335,7 +341,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:layout_gravity="center"
                                 android:gravity="center"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -373,7 +380,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:layout_gravity="center"
                                 android:gravity="center"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -401,7 +409,7 @@
                                 android:layout_alignLeft="@+id/text1"
                                 android:layout_alignRight="@+id/textView3"
                                 android:text=":"
-                                android:textColor="#000" />
+                                android:textColor="#000"/>
 
                             <util.MyCustomEditText
                                 android:id="@+id/ed_proposal_bb"
@@ -411,7 +419,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:layout_gravity="center"
                                 android:gravity="center"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -449,7 +458,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:layout_gravity="center"
                                 android:gravity="center"
-                                android:background="@drawable/edittext_rounded_box"/>
+                                android:background="@drawable/edittext_rounded_box"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 

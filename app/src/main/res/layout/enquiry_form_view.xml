@@ -108,7 +108,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -146,7 +147,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -185,7 +187,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -223,7 +226,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -261,7 +265,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -299,7 +304,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -337,7 +343,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -375,7 +382,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -413,7 +421,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -451,7 +460,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -489,7 +499,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -527,7 +538,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -565,7 +577,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -604,7 +617,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -642,7 +656,8 @@
                                 android:layout_marginRight="@dimen/_12sdp"
                                 android:background="@drawable/edittext_rounded_box"
                                 android:layout_gravity="center"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:textColor="@color/black"/>
 
                         </LinearLayout>
 

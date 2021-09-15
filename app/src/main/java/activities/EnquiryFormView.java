@@ -57,8 +57,6 @@ public class EnquiryFormView extends AppCompatActivity {
         enquiryId=i.getStringExtra("enquiryId");
         login_id=i.getStringExtra("login_id");
 
-        System.out.println("token===="+token+" ===== "+enquiryId);
-
         ScrollTextView scrolltext=findViewById(R.id.scrolltext);
         scrolltext.setText(R.string.footer);
         scrolltext.startScroll();
@@ -105,7 +103,7 @@ public class EnquiryFormView extends AppCompatActivity {
     private void loadJSON() {
 
         showBar();
-        Call<CrmEnquiryFormViewBean> call= RetrofitClient.getInstance().getApi().getCrmEnquiryFormView("c33f17bfd02f8496665c1e0a0c2248df","26");
+        Call<CrmEnquiryFormViewBean> call= RetrofitClient.getInstance().getApi().getCrmEnquiryFormView(token,enquiryId);
         call.enqueue(new Callback<CrmEnquiryFormViewBean>() {
 
             @Override
@@ -119,37 +117,155 @@ public class EnquiryFormView extends AppCompatActivity {
                     if(status.equals("true")){
                         CrmEnquiryFormViewBean.CEnqFormEnqyDetails cEnqFormEnqyDetails=crmEnquiryFormViewBean.getcEnqFormEnqyDetails();
 
-                        callType=cEnqFormEnqyDetails.getCallType();
-                        date=cEnqFormEnqyDetails.getDate();
-                        clientType=cEnqFormEnqyDetails.getClientType();
-                        companyName=cEnqFormEnqyDetails.getCompanyName();
-                        location=cEnqFormEnqyDetails.getLocation();
-                        address=cEnqFormEnqyDetails.getAddress();
-                        client=cEnqFormEnqyDetails.getClient();
-                        mobile=cEnqFormEnqyDetails.getMobile();
-                        designation=cEnqFormEnqyDetails.getDesignation();
-                        mail=cEnqFormEnqyDetails.getMail();
-                        product=cEnqFormEnqyDetails.getProduct();
-                        feedback=cEnqFormEnqyDetails.getFeedback();
-                        followUp=cEnqFormEnqyDetails.getFollowUp();
-                        department=cEnqFormEnqyDetails.getDepartment();
-                        employee=cEnqFormEnqyDetails.getEmployee();
+                        if(cEnqFormEnqyDetails.getCallType()==null || cEnqFormEnqyDetails.getCallType()==""){
+                            callType="Not Available";
+                        }else{
+                            callType=cEnqFormEnqyDetails.getCallType();
+                        }
+
+                        if(cEnqFormEnqyDetails.getDate()==null || cEnqFormEnqyDetails.getDate()==""){
+                            date="Not Available";
+                        }else{
+                            date=cEnqFormEnqyDetails.getDate();
+                        }
+
+                        if(cEnqFormEnqyDetails.getClientType()==null || cEnqFormEnqyDetails.getClientType()==""){
+                            clientType="Not Available";
+                        }else{
+                            clientType=cEnqFormEnqyDetails.getClientType();
+                        }
+
+                        if(cEnqFormEnqyDetails.getCompanyName()==null || cEnqFormEnqyDetails.getCompanyName()==""){
+                            companyName="Not Available";
+                        }else{
+                            companyName=cEnqFormEnqyDetails.getCompanyName();
+                        }
+
+                        if(cEnqFormEnqyDetails.getLocation()==null || cEnqFormEnqyDetails.getLocation()==""){
+                            location="Not Available";
+                        }else{
+                            location=cEnqFormEnqyDetails.getLocation();
+                        }
+
+                        if(cEnqFormEnqyDetails.getAddress()==null || cEnqFormEnqyDetails.getAddress()==""){
+                            address="Not Available";
+                        }else{
+                            address=cEnqFormEnqyDetails.getAddress();
+                        }
+
+                        if(cEnqFormEnqyDetails.getClient()==null || cEnqFormEnqyDetails.getClient()==""){
+                            client="Not Available";
+                        }else{
+                            client=cEnqFormEnqyDetails.getClient();
+                        }
+
+                        if(cEnqFormEnqyDetails.getMobile()==null || cEnqFormEnqyDetails.getMobile()==""){
+                            mobile="Not Available";
+                        }else{
+                            mobile=cEnqFormEnqyDetails.getMobile();
+                        }
+
+                        if(cEnqFormEnqyDetails.getDesignation()==null || cEnqFormEnqyDetails.getDesignation()==""){
+                            designation="Not Available";
+                        }else{
+                            designation=cEnqFormEnqyDetails.getDesignation();
+                        }
+
+                        if(cEnqFormEnqyDetails.getMail()==null || cEnqFormEnqyDetails.getMail()==""){
+                            mail="Not Available";
+                        }else{
+                            mail=cEnqFormEnqyDetails.getMail();
+                        }
+
+                        if(cEnqFormEnqyDetails.getProduct()==null || cEnqFormEnqyDetails.getProduct()==""){
+                            product="Not Available";
+                        }else{
+                            product=cEnqFormEnqyDetails.getProduct();
+                        }
+
+                        if(cEnqFormEnqyDetails.getFeedback()==null || cEnqFormEnqyDetails.getFeedback()==""){
+                            feedback="Not Available";
+                        }else{
+                            feedback=cEnqFormEnqyDetails.getFeedback();
+                        }
+
+                        if(cEnqFormEnqyDetails.getFollowUp()==null || cEnqFormEnqyDetails.getFollowUp()==""){
+                            followUp="Not Available";
+                        }else{
+                            followUp=cEnqFormEnqyDetails.getFollowUp();
+                        }
+
+                        if(cEnqFormEnqyDetails.getDepartment()==null || cEnqFormEnqyDetails.getDepartment()==""){
+                            department="Not Available";
+                        }else{
+                            department=cEnqFormEnqyDetails.getDepartment();
+                        }
+
+                        if(cEnqFormEnqyDetails.getEmployee()==null || cEnqFormEnqyDetails.getEmployee()==""){
+                            employee="Not Available";
+                        }else{
+                            employee=cEnqFormEnqyDetails.getEmployee();
+                        }
 
                         ed_calltype.setText(callType);
+                        ed_calltype.setEnabled(false);
+                        ed_calltype.setBackgroundResource(R.drawable.editextbg);
+
                         ed_date.setText(date);
+                        ed_date.setEnabled(false);
+                        ed_date.setBackgroundResource(R.drawable.editextbg);
+
                         ed_clienttype.setText(clientType);
+                        ed_clienttype.setEnabled(false);
+                        ed_clienttype.setBackgroundResource(R.drawable.editextbg);
+
                         ed_companyname.setText(companyName);
+                        ed_companyname.setEnabled(false);
+                        ed_companyname.setBackgroundResource(R.drawable.editextbg);
+
                         ed_location.setText(location);
+                        ed_location.setEnabled(false);
+                        ed_location.setBackgroundResource(R.drawable.editextbg);
+
                         ed_address.setText(address);
+                        ed_address.setEnabled(false);
+                        ed_address.setBackgroundResource(R.drawable.editextbg);
+
                         ed_clientname.setText(client);
+                        ed_clientname.setEnabled(false);
+                        ed_clientname.setBackgroundResource(R.drawable.editextbg);
+
                         ed_contactno.setText(mobile);
+                        ed_contactno.setEnabled(false);
+                        ed_contactno.setBackgroundResource(R.drawable.editextbg);
+
                         ed_designation.setText(designation);
+                        ed_designation.setEnabled(false);
+                        ed_designation.setBackgroundResource(R.drawable.editextbg);
+
                         ed_emailid.setText(mail);
+                        ed_emailid.setEnabled(false);
+                        ed_emailid.setBackgroundResource(R.drawable.editextbg);
+
                         ed_service.setText(product);
+                        ed_service.setEnabled(false);
+                        ed_service.setBackgroundResource(R.drawable.editextbg);
+
                         ed_feedback.setText(feedback);
+                        ed_feedback.setEnabled(false);
+                        ed_feedback.setBackgroundResource(R.drawable.editextbg);
+
                         ed_followupdate.setText(followUp);
+                        ed_followupdate.setEnabled(false);
+                        ed_followupdate.setBackgroundResource(R.drawable.editextbg);
+
                         ed_department.setText(department);
+                        ed_department.setEnabled(false);
+                        ed_department.setBackgroundResource(R.drawable.editextbg);
+
                         ed_employeename.setText(employee);
+                        ed_employeename.setEnabled(false);
+                        ed_employeename.setBackgroundResource(R.drawable.editextbg);
 
                         if (crmEnquiryFormViewBean.getcEnqFormfeedbackEntryDetailsList()!=null){
                             cv_feedackentrydetails.setVisibility(View.VISIBLE);
@@ -176,7 +292,9 @@ public class EnquiryFormView extends AppCompatActivity {
                                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
-                                        Intent i=new Intent(EnquiryFormView.this,CostSheet.class);
+                                        Intent i=new Intent(EnquiryFormView.this,EnquiryCandidateList.class);
+                                        i.putExtra("token",token);
+                                        i.putExtra("login_id",login_id);
                                         startActivity(i);
                                         finish();
                                     }
@@ -189,12 +307,14 @@ public class EnquiryFormView extends AppCompatActivity {
                         progressDialog.dismiss();
                         new android.app.AlertDialog.Builder(EnquiryFormView.this)
                                 .setCancelable(false)
-                                .setTitle("Info")
+                                .setTitle("Error")
                                 .setMessage(response.errorBody().string())
                                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
-                                        Intent i=new Intent(EnquiryFormView.this,CostSheet.class);
+                                        Intent i=new Intent(EnquiryFormView.this,EnquiryCandidateList.class);
+                                        i.putExtra("token",token);
+                                        i.putExtra("login_id",login_id);
                                         startActivity(i);
                                         finish();
                                     }
@@ -212,12 +332,14 @@ public class EnquiryFormView extends AppCompatActivity {
                 progressDialog.dismiss();
                 new android.app.AlertDialog.Builder(EnquiryFormView.this)
                         .setCancelable(false)
-                        .setTitle("Error")
+                        .setTitle("Failure Error")
                         .setMessage(t.getMessage())
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                Intent i=new Intent(EnquiryFormView.this,CostSheet.class);
+                                Intent i=new Intent(EnquiryFormView.this,EnquiryCandidateList.class);
+                                i.putExtra("token",token);
+                                i.putExtra("login_id",login_id);
                                 startActivity(i);
                                 finish();
                             }
@@ -316,7 +438,7 @@ public class EnquiryFormView extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent MainActivity = new Intent(getBaseContext(), CostSheet.class);
+        Intent MainActivity = new Intent(getBaseContext(), EnquiryCandidateList.class);
         MainActivity.putExtra("token",token);
         MainActivity.putExtra("login_id",login_id);
         MainActivity.addCategory(Intent.CATEGORY_HOME);
@@ -324,6 +446,5 @@ public class EnquiryFormView extends AppCompatActivity {
         startActivity(MainActivity);
         EnquiryFormView.this.finish();
     }
-
 
 }

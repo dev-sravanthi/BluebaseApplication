@@ -65,8 +65,6 @@ public class InterviewFeedbackForm extends AppCompatActivity implements AdapterV
         login_id=i.getStringExtra("login_id");
         candidate_id=i.getStringExtra("feedback_candidateId");
 
-        System.out.println(token+" ====== "+candidate_id+"======= "+login_id);
-
         jsonObject_rounds=new JSONObject();
 
         ScrollTextView scrolltext=findViewById(R.id.scrolltext);
@@ -98,7 +96,6 @@ public class InterviewFeedbackForm extends AppCompatActivity implements AdapterV
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 st_spin_status = spin_status.getSelectedItem().toString();
-                System.out.println("st_spin_statu====="+st_spin_status);
                 if(st_spin_status.equals("Select for Next Level")){
                     selected_status="true";
                 }else if(st_spin_status.equals("Not Selected")){
@@ -196,7 +193,7 @@ public class InterviewFeedbackForm extends AppCompatActivity implements AdapterV
                         new android.app.AlertDialog.Builder(InterviewFeedbackForm.this)
                                 .setCancelable(false)
                                 .setTitle("Info")
-                                .setMessage(status_message)
+                                .setMessage(set_status_message)
                                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
@@ -241,7 +238,7 @@ public class InterviewFeedbackForm extends AppCompatActivity implements AdapterV
                 progressDialog.dismiss();
                 new android.app.AlertDialog.Builder(InterviewFeedbackForm.this)
                         .setCancelable(false)
-                        .setTitle("Info")
+                        .setTitle("Failure Error")
                         .setMessage(t.getMessage())
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
@@ -346,11 +343,15 @@ public class InterviewFeedbackForm extends AppCompatActivity implements AdapterV
 
                 }else{
                     progressDialog.dismiss();
+                    JSONObject jObjError = null;
                     try {
+                        jObjError = new JSONObject(response.errorBody().string());
+                        String error=jObjError.getString("message");
+
                         new android.app.AlertDialog.Builder(InterviewFeedbackForm.this)
                                 .setCancelable(false)
-                                .setTitle("Info")
-                                .setMessage(response.errorBody().string())
+                                .setTitle("Error")
+                                .setMessage(error)
                                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
@@ -362,6 +363,9 @@ public class InterviewFeedbackForm extends AppCompatActivity implements AdapterV
                                     }
                                 })
                                 .show();
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -375,7 +379,7 @@ public class InterviewFeedbackForm extends AppCompatActivity implements AdapterV
                 progressDialog.dismiss();
                 new android.app.AlertDialog.Builder(InterviewFeedbackForm.this)
                         .setCancelable(false)
-                        .setTitle("Info")
+                        .setTitle("Failure Error")
                         .setMessage(t.getMessage())
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override

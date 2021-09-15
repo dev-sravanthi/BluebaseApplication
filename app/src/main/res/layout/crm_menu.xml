@@ -50,70 +50,59 @@
                         android:layout_marginTop="@dimen/_10sdp">
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
+                            android:id="@+id/ll_enquiryform"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:layout_gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_gravity="left"
                             android:gravity="center">
 
                             <ImageButton
-                                android:id="@+id/imgbtn_candidatelist"
-                                android:layout_width="@dimen/_50sdp"
+                                android:id="@+id/imgbtn_enquiryform"
+                                android:layout_width="0dp"
                                 android:layout_height="@dimen/_50sdp"
-                                android:background="@drawable/recruitment"/>
+                                android:layout_weight="0.3"
+                                android:background="@drawable/enquiry_form"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
 
                             <util.MyCustomTextView_Bold
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:text="Recruitment"
+                                android:layout_weight="0.7"
+                                android:text="Enquiry Form"
                                 android:textStyle="bold"
-                                android:textColor="@color/btn_blue"/>
+                                android:textColor="@color/btn_blue"
+                                android:layout_marginLeft="@dimen/_25sdp"
+                                android:textSize="@dimen/_16sdp"/>
 
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
+                            android:id="@+id/ll_costsheet"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:layout_gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_gravity="left"
                             android:gravity="center"
-                            android:layout_marginTop="@dimen/_15sdp">
-
-                            <ImageButton
-                                android:id="@+id/imgbtn_feedbacklist"
-                                android:layout_width="@dimen/_50sdp"
-                                android:layout_height="@dimen/_50sdp"
-                                android:background="@drawable/interview_feedback_form"/>
-
-                            <util.MyCustomTextView_Bold
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Interview Feedback Form"
-                                android:textStyle="bold"
-                                android:textColor="@color/btn_blue"/>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:layout_marginTop="@dimen/_15sdp">
+                            android:layout_marginTop="@dimen/_10sdp">
 
                             <ImageButton
                                 android:id="@+id/imgbtn_costsheet"
-                                android:layout_width="@dimen/_50sdp"
-                                android:layout_height="@dimen/_50sdp"
-                                android:background="@drawable/crm"/>
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/_60sdp"
+                                android:layout_weight="0.3"
+                                android:background="@drawable/cost_sheet"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
 
                             <util.MyCustomTextView_Bold
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:text="CRM"
+                                android:layout_weight="0.7"
+                                android:text="Cost Sheet"
                                 android:textStyle="bold"
-                                android:textColor="@color/btn_blue"/>
+                                android:textColor="@color/btn_blue"
+                                android:layout_marginLeft="@dimen/_25sdp"
+                                android:textSize="@dimen/_16sdp"/>
 
                         </LinearLayout>
 

@@ -51,8 +51,6 @@ public class FeedbackCandidateList extends AppCompatActivity {
         token=i.getStringExtra("token");
         login_id=i.getStringExtra("login_id");
 
-        System.out.println(token+" ====== "+login_id);
-
         ScrollTextView scrolltext=findViewById(R.id.scrolltext);
         scrolltext.setText(R.string.footer);
         scrolltext.startScroll();
@@ -99,13 +97,48 @@ public class FeedbackCandidateList extends AppCompatActivity {
                                 feedbackCandidateListBean.getFeedbackCandLists();
 
                         for(int i=0;i<feedbackCandLists.size();i++){
-                            candidateId=feedbackCandLists.get(i).getCandidateId();
-                            firstName=feedbackCandLists.get(i).getFirstName();
-                            lastName=feedbackCandLists.get(i).getLastName();
-                            position=feedbackCandLists.get(i).getPosition();
-                            headStatus=feedbackCandLists.get(i).getHeadStatus();
-                            status=feedbackCandLists.get(i).getStatus();
-                            isAddFeedback=feedbackCandLists.get(i).getIsAddFeedback();
+
+                            if(feedbackCandLists.get(i).getCandidateId()==null || feedbackCandLists.get(i).getCandidateId()==""){
+                                candidateId="Not Available";
+                            }else{
+                                candidateId=feedbackCandLists.get(i).getCandidateId();
+                            }
+
+                            if(feedbackCandLists.get(i).getFirstName()==null || feedbackCandLists.get(i).getFirstName()==""){
+                                firstName="Not Available";
+                            }else{
+                                firstName=feedbackCandLists.get(i).getFirstName();
+                            }
+
+                            if(feedbackCandLists.get(i).getLastName()==null || feedbackCandLists.get(i).getLastName()==""){
+                                lastName="Not Available";
+                            }else{
+                                lastName=feedbackCandLists.get(i).getLastName();
+                            }
+
+                            if(feedbackCandLists.get(i).getPosition()==null || feedbackCandLists.get(i).getPosition()==""){
+                                position="Not Available";
+                            }else{
+                                position=feedbackCandLists.get(i).getPosition();
+                            }
+
+                            if(feedbackCandLists.get(i).getHeadStatus()==null || feedbackCandLists.get(i).getHeadStatus()==""){
+                                headStatus="Not Available";
+                            }else{
+                                headStatus=feedbackCandLists.get(i).getHeadStatus();
+                            }
+
+                            if(feedbackCandLists.get(i).getStatus()==null || feedbackCandLists.get(i).getStatus()==""){
+                                status="Not Available";
+                            }else{
+                                status=feedbackCandLists.get(i).getStatus();
+                            }
+
+                            if(feedbackCandLists.get(i).getIsAddFeedback()==null || feedbackCandLists.get(i).getIsAddFeedback()==""){
+                                isAddFeedback="Not Available";
+                            }else{
+                                isAddFeedback=feedbackCandLists.get(i).getIsAddFeedback();
+                            }
 
                             FeedbackListBean feedbackListBean=new FeedbackListBean(candidateId,firstName,lastName,
                                     position,headStatus,status,isAddFeedback);

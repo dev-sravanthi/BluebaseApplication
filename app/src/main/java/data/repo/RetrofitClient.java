@@ -2,14 +2,16 @@ package data.repo;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
 import data.network.ApiInterface;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
     private static RetrofitClient retrofitClient;
-    private static final String BASE_URL = "http://115.243.95.118:8081/hrms/hrms_android/";
+//    private static final String BASE_URL = "http://115.243.95.118:8081/hrms/hrms_android/";
+    private static final String BASE_URL = "http://192.168.201.73/hrms/hrms_android/";
+//    private static final String BASE_URL = "http://192.168.200.89:8081/hrms/hrms_android/";
+
     private Retrofit retrofit;
 
     Gson gson = new GsonBuilder()
@@ -32,6 +34,5 @@ public class RetrofitClient {
     public ApiInterface getApi(){
         return retrofit.create(ApiInterface.class);
     }
-
 
 }

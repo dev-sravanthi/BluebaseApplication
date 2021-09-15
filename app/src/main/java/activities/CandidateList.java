@@ -8,21 +8,18 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.bluebase.activities.R;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
 import bean.CandidateListBean;
 import data.repo.RetrofitClient;
 import retrofit2.Call;
@@ -98,15 +95,59 @@ public class CandidateList extends AppCompatActivity {
                                 candidateListBean.getCandidateListDataList();
 
                         for(int i=0;i<candidateListDataList.size();i++){
-                            firstName=candidateListDataList.get(i).getFirstName();
-                            lastName=candidateListDataList.get(i).getLastName();
-                            deptName=candidateListDataList.get(i).getDeptName();
-                            designationName=candidateListDataList.get(i).getDesignationName();
-                            phone=candidateListDataList.get(i).getPhone();
-                            email=candidateListDataList.get(i).getEmail();
-                            candidateId=candidateListDataList.get(i).getCandidateId();
-                            status=candidateListDataList.get(i).getStatus();
-                            status_message=candidateListDataList.get(i).getStatus_message();
+                            if(candidateListDataList.get(i).getFirstName()==null || candidateListDataList.get(i).getFirstName()==""){
+                                firstName="Not Available";
+                            }else{
+                                firstName=candidateListDataList.get(i).getFirstName();
+                            }
+
+                            if(candidateListDataList.get(i).getLastName()==null || candidateListDataList.get(i).getLastName()==""){
+                                lastName="Not Available";
+                            }else{
+                                lastName=candidateListDataList.get(i).getLastName();
+                            }
+
+                            if(candidateListDataList.get(i).getDeptName()==null || candidateListDataList.get(i).getDeptName()==""){
+                                deptName="Not Available";
+                            }else{
+                                deptName=candidateListDataList.get(i).getDeptName();
+                            }
+
+                            if(candidateListDataList.get(i).getDesignationName()==null || candidateListDataList.get(i).getDesignationName()==""){
+                                designationName="Not Available";
+                            }else{
+                                designationName=candidateListDataList.get(i).getDesignationName();
+                            }
+
+                            if(candidateListDataList.get(i).getPhone()==null || candidateListDataList.get(i).getPhone()==""){
+                                phone="Not Available";
+                            }else{
+                                phone=candidateListDataList.get(i).getPhone();
+                            }
+
+                            if(candidateListDataList.get(i).getEmail()==null || candidateListDataList.get(i).getEmail()==""){
+                                email="Not Available";
+                            }else{
+                                email=candidateListDataList.get(i).getEmail();
+                            }
+
+                            if(candidateListDataList.get(i).getCandidateId()==null || candidateListDataList.get(i).getCandidateId()==""){
+                                candidateId="Not Available";
+                            }else{
+                                candidateId=candidateListDataList.get(i).getCandidateId();
+                            }
+
+                            if(candidateListDataList.get(i).getStatus()==null || candidateListDataList.get(i).getStatus()==""){
+                                status="Not Available";
+                            }else{
+                                status=candidateListDataList.get(i).getStatus();
+                            }
+
+                            if(candidateListDataList.get(i).getStatus_message()==null || candidateListDataList.get(i).getStatus_message()==""){
+                                status_message="Not Available";
+                            }else{
+                                status_message=candidateListDataList.get(i).getStatus_message();
+                            }
 
                             CanListBean canListBean=new CanListBean(firstName,lastName,deptName,designationName,
                                     phone,email,candidateId,status,status_message);
@@ -187,6 +228,7 @@ public class CandidateList extends AppCompatActivity {
         public class ViewHolder extends RecyclerView.ViewHolder {
             public TextView text_sno,text_name,text_department,text_position,text_phone,text_mail,text_status,
                     text_action;
+            public ImageButton img_eye_view;
 
             public ViewHolder(View view) {
                 super(view);
@@ -198,7 +240,7 @@ public class CandidateList extends AppCompatActivity {
                 text_mail = (TextView) view.findViewById(R.id.text_mail);
                 text_status = (TextView) view.findViewById(R.id.text_status);
                 text_action = (TextView) view.findViewById(R.id.text_action);
-
+                img_eye_view=(ImageButton)view.findViewById(R.id.img_eye_view);
             }
         }
 
@@ -226,15 +268,16 @@ public class CandidateList extends AppCompatActivity {
             holder.text_phone.setText(data.getPhone());
             holder.text_mail.setText(data.getEmail());
             holder.text_status.setText(data.getStatus_message());
-            holder.text_action.setText("View");
+            holder.img_eye_view.setImageResource(R.drawable.view);
 
-            holder.text_action.setOnClickListener(new View.OnClickListener() {
+            holder.img_eye_view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent=new Intent(getApplicationContext(),CandidateView.class);
                     intent.putExtra("FROM_ACTIVITY","CandidateList");
                     intent.putExtra("candidateId",data.getCandidateId());
                     intent.putExtra("token",token);
+                    intent.putExtra("login_id",login_id);
                     startActivity(intent);
                     finish();
                 }
